@@ -18,7 +18,7 @@ export default function RootLayout({
       <body className="h-full bg-white relative">
         <div className="absolute top-4 left-4 z-10">
           <Image 
-            src="/images/logoGovlab.jpg"
+            src="/images/LogoGovlab.jpg"
             alt="Logo GovLab" 
             width={150}
             height={50}

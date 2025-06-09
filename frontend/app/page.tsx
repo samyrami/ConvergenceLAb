@@ -16,6 +16,7 @@ import type { ConnectionDetails } from "./api/connection-details/route";
 import { NoAgentNotification } from "@/components/NoAgentNotification";
 import { CloseIcon } from "@/components/CloseIcon";
 import { useKrispNoiseFilter } from "@livekit/components-react/krisp";
+import Image from 'next/image';
 
 export default function Page() {
   const [connectionDetails, updateConnectionDetails] = useState<
@@ -92,12 +93,22 @@ function SimpleVoiceAssistant(props: {
     props.onStateChange(state);
   }, [props, state]);
   return (
-    <div className="h-[300px] max-w-[90vw] mx-auto">
+    <div className="h-[300px] max-w-[90vw] mx-auto relative">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 z-10">
+        <Image
+          src="/images/Cesar.jpg"
+          alt="Cesar AI Assistant"
+          width={200}
+          height={200}
+          className="rounded-full"
+          priority
+        />
+      </div>
       <BarVisualizer
         state={state}
         barCount={5}
         trackRef={audioTrack}
-        className="agent-visualizer"
+        className="agent-visualizer mt-[150px]"
         options={{ minHeight: 24 }}
       />
     </div>
