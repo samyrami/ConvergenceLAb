@@ -20,8 +20,8 @@ export default function RootLayout({
           <Image 
             src="/images/LogoGovlab.jpg"
             alt="Logo GovLab" 
-            width={120}
-            height={45}
+            width={155}
+            height={20}
             priority
           />
         </div>
@@ -29,7 +29,7 @@ export default function RootLayout({
           <Image 
             src="/images/logo.jpg"
             alt="Logo Universidad de la Sabana" 
-            width={120}
+            width={135}
             height={45}
             priority
           />
