@@ -77,7 +77,6 @@ export default function Page() {
         <p>Institución de educación superior sujeta a inspección y vigilancia por el Ministerio de Educación Nacional.</p>
         <p>© 2025 Universidad de La Sabana. Todos los derechos reservados.</p>
         <p>Desarrollado por el GovLab de la Universidad de La Sabana</p>
-        <p>Desarrollador: <a href="https://github.com/samyrami" target="_blank" className="underline">Samuel Ramirez</a></p>
         <p>Contáctenos al correo: <a href="mailto:convergence.lab@unisabana.edu.co" className="underline">convergencelab@unisabana.edu.co</a></p>
         <p>Campus del Puente del Común, Km. 7, Autopista Norte de Bogotá. Chía, Cundinamarca, Colombia.</p>
       </footer>
@@ -94,12 +93,12 @@ function SimpleVoiceAssistant(props: {
   }, [props, state]);
   return (
     <div className="h-[300px] max-w-[90vw] mx-auto relative">
-      <div className="absolute top-[-120px] left-1/2 -translate-x-1/2 z-10">
+      <div className="absolute top-[-90px] left-1/2 -translate-x-1/2 z-10">
         <Image
           src="/images/Cesar.jpg"
           alt="Cesar AI Assistant"
-          width={90}
-          height={90}
+          width={160}
+          height={160}
           className="rounded-full"
           priority
         />
@@ -129,7 +128,7 @@ function ControlBar(props: {
   }, []);
 
   return (
-    <div className="relative h-[100px]">
+    <div className="relative h-[200px]">
       <AnimatePresence>
         {props.agentState === "disconnected" && (
           <motion.button
