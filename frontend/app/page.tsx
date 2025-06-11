@@ -94,12 +94,12 @@ function SimpleVoiceAssistant(props: {
   }, [props, state]);
   return (
     <div className="h-[300px] max-w-[90vw] mx-auto relative">
-      <div className="absolute top-[-30px] left-1/2 -translate-x-1/2 z-10">
+      <div className="absolute top-[-120px] left-1/2 -translate-x-1/2 z-10">
         <Image
           src="/images/Cesar.jpg"
           alt="Cesar AI Assistant"
-          width={200}
-          height={200}
+          width={90}
+          height={90}
           className="rounded-full"
           priority
         />
@@ -137,7 +137,7 @@ function ControlBar(props: {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, top: "-10px" }}
             transition={{ duration: 1, ease: [0.09, 1.04, 0.245, 1.055] }}
-            className="uppercase absolute left-1/2 -translate-x-1/2 px-4 py-2 bg-gradient-to-r from-[#1903ff] to-[#6d5fff] text-white rounded-md mt-4"
+            className="uppercase absolute left-1/2 -translate-x-1/2 px-4 py-2 bg-gradient-to-r from-[#1903ff] to-[#6d5fff] text-white rounded-md mt-36"
             onClick={() => props.onConnectButtonClicked()}
           >
            Haz click acá y pregúntame lo que quieras del ConvergenceLab 😀

@@ -16,21 +16,21 @@ export default function RootLayout({
   return (
     <html lang="en" className={`h-full ${publicSans400.className}`}>
       <body className="h-full bg-white relative">
-        <div className="absolute top-4 left-4 z-10">
+        <div className="absolute top-6 left-6 z-10">
           <Image 
             src="/images/LogoGovlab.jpg"
             alt="Logo GovLab" 
-            width={100}
-            height={40}
+            width={120}
+            height={45}
             priority
           />
         </div>
-        <div className="absolute top-4 right-4 z-10">
+        <div className="absolute top-6 right-6 z-10">
           <Image 
             src="/images/logo.jpg"
             alt="Logo Universidad de la Sabana" 
-            width={100}
-            height={40}
+            width={120}
+            height={45}
             priority
           />
         </div>
