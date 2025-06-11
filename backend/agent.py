@@ -193,7 +193,7 @@ La Universidad de La Sabana impulsa el modelo de **Universidad de Tercera Genera
 ---
 
 ## 🧭 Portafolio Académico y Programas
-
+- 181 programas académicos 
 - 20 nuevos programas (9 virtuales, 10 híbridos, 1 presencial)
 - 2 doctorados nuevos: Ciencias Clínicas e Inteligencia Artificial
 - 12 nuevas maestrías: Analítica Aplicada, Software, Teología, Comunicación Política, entre otras
@@ -280,6 +280,136 @@ La Universidad de La Sabana impulsa el modelo de **Universidad de Tercera Genera
 - Proyecto “Sabana Centro Cómo Vamos”: Encuesta de percepción con 300 indicadores
 
 ---
+# 🏛️ Contexto del Centro de Emprendimiento e Innovación Sabana
+
+Desde 2016, el **Centro de Emprendimiento e Innovación Sabana** es la incubadora de emprendedores de la Universidad de La Sabana. Su objetivo es **impulsar el desarrollo social y económico regional** mediante:
+
+- ✅ Fortalecimiento del tejido empresarial  
+- ✅ Dinamización de la comunidad emprendedora  
+- ✅ Aseguramiento del éxito de proyectos innovadores  
+
+---
+
+## 🔁 Modelo de Emprendimiento en 4 Fases
+
+1. **Sensibilizar**  
+   - Experiencias de inspiración y networking.  
+   - **Impacto:** 28.202 emprendedores sensibilizados.
+
+2. **Entrenar**  
+   - Entrenamiento práctico en habilidades, emprendimiento, innovación y ecosistema.  
+   - **Impacto:** 11.632 emprendedores entrenados.
+
+3. **Acompañar**  
+   - Más de 13 estrategias activas, como:
+     - Red de mentores  
+     - Simulación de juntas directivas  
+     - Retos de aula  
+   - **Impacto:** +1.100 emprendedores incubados.
+
+4. **Potenciar**  
+   - Acciones de pre-aceleración como:
+     - Capital semilla  
+     - Conexiones con clientes  
+     - Networking estratégico
+
+---
+
+## 🤝 Alianzas Estratégicas
+
+El Centro trabaja articuladamente con más de 30 aliados, entre ellos:
+
+- **Connect Bogotá** (18 universidades vinculadas)
+- **Empresas privadas:**  
+  - Grupo Energía Bogotá  
+  - Grupo Bolívar  
+  - Mercado Libre  
+  - Oracle
+- **iNNpulsa Colombia**: la Universidad opera **CEmprende Cundinamarca**
+
+---
+
+## 🌳 Red de Mentores - *Bosque de Expertos*
+
+- **279 mentores activos**
+- Participación de: profesores, administrativos, egresados y aliados del ecosistema
+- Apoyo voluntario a emprendedores en etapas clave
+
+---
+
+## 🧩 Estrategias de Incubación
+
+- **Club de emprendedores**  
+  - Liderado por estudiantes, con 246 miembros activos
+
+- **5 programas de acompañamiento** según etapa del emprendimiento
+
+- **Programas con aliados**  
+  - Mujeres emprendedoras Fontanar  
+  - Jóvenes emprendedores Fontanar  
+  - Programa de propiedad industrial
+
+- **Innovaciones académicas**  
+  - Retos de aula  
+  - Consultorios universitarios  
+  - Simulación de juntas directivas
+
+---
+
+## 🏆 Casos de Éxito
+
+### 🎖 Mateo Bolívar *(Estudiante de Negocios Internacionales)*
+- Fundador de **E-line** y **Contler**
+- Participante en **Shark Tank 2020 y 2023**
+- **USD 470.000** levantados
+- Becario **Start Fellowship (Suiza)**
+- Reconocido por:
+  - Global Student Entrepreneur Award (2do mejor del mundo, 2022)
+  - iNNpulsa Colombia (Mejor joven emprendedor 2022)
+
+### 🎖 Simón Dueñas *(Administración de Empresas)*
+- Fundador de **Bioparque Monarca**
+- **COP 1.000 millones en ingresos anuales**
+- **33 empleos directos**
+- Premios:
+  - Finalista Premios Lazos (Embajada Británica, 2023)
+  - Ganador Premios Ambientales (CAR, 2023)
+  - Mejor proyecto social (Hult Prize on Campus, 2024)
+  - 2do lugar en GSEA 2024
+
+### 🎖 Camila Cooper *(Comunicación Social y Periodismo)*
+- Fundadora de **Fruto Bendito**
+- Impacto: **9.800 familias en 41 ciudades**
+- Premios:
+  - Young Leaders of the Americas Initiative (YLAI, 2021)
+  - Latin American Leaders Award
+  - Mujer de Éxito (2020)
+  - WEF: *Iconic Women Creating a Better World for All* (2019)
+  - Premio Impacto Sostenible (Ventures, 2018)
+  - Momentum BBVA (2017)
+
+### 🎖 Santiago Ortega *(Ingeniería Industrial)*
+- Fundador de **Sketos**
+- +200 clientes y 53 empleados
+- Becario YLAI 2022
+
+### 🎖 Daniel Tirado *(Administración de Mercadeo y Logística)*
+- Fundador de **Tekton Soluciones**
+- Instalación de **cubierta Adportas** de la Universidad
+
+---
+
+## 📌 Participación en Ecosistemas y Mesas de Trabajo
+
+- **METAREDX by Universia**
+- **Banco Santander**
+- **Comité de emprendimiento Connect** (18 universidades)
+- **Red de Impacto**
+- **REUNE**
+- Participación de **25+ aliados** en iniciativas para capacidades digitales
+
+---
+
 
 ## 🔄 Protocolo de Respuesta de Sabius
 
