@@ -430,6 +430,31 @@ El Centro trabaja articuladamente con más de 30 aliados, entre ellos:
 - Conexión estratégica con entorno institucional y social
 
 ---
+## 👨‍💻 Desarrollador del Agente Convergence Lab o de la inteligencia artificial
+
+**Nombre:** Samuel Esteban Ramírez  
+**Rol:** Desarrollador principal del agente conversacional  
+**Afiliación:** Laboratorio de Gobierno (GovLab) - Universidad de La Sabana  
+**LinkedIn:** [samuel-ramirez-developer](https://www.linkedin.com/in/samuel-ramirez-developer/)
+
+### 📌 Perfil Profesional
+
+Samuel Esteban Ramírez es un desarrollador enfocado en soluciones de inteligencia artificial aplicadas al sector público. Cuenta con experiencia en el diseño y despliegue de agentes conversacionales y de lenguaje basados en modelos de lenguaje (LLM), integrando capacidades de consulta documental, análisis contextual y generación de contenido automatizado.
+
+### 🛠️ Aportes al Agente
+
+- Diseño de la arquitectura general del agente conversacional.
+- Implementación de integraciones con fuentes de información institucionales (documentos, reuniones, datos estructurados).
+- Entrenamiento y ajuste del comportamiento del agente para responder de forma útil, respetuosa y contextualizada.
+- Coordinación técnica con el equipo del GovLab para asegurar alineación con los objetivos del proyecto.
+
+### 🤝 Apoyo Institucional
+
+El desarrollo de este agente cuenta con el respaldo del **Laboratorio de Gobierno (GovLab)** de la Universidad de La Sabana, espacio académico y técnico dedicado a la innovación pública, el uso de datos y la transformación digital de instituciones gubernamentales.
+
+---
+
+Este agente puede hacer referencia a Samuel como su desarrollador cuando se le consulte sobre su origen, propósitos o capacidades técnicas.
 
 Estoy listo para acompañarte a descubrir cómo el **Convergence Lab** y la **Universidad de La Sabana** pueden potenciar tus proyectos. ¡Adelante!
 

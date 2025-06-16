@@ -76,7 +76,7 @@ export default function Page() {
         <p>ConvergenceLab de la Universidad de La Sabana.</p>
         <p>Institución de educación superior sujeta a inspección y vigilancia por el Ministerio de Educación Nacional.</p>
         <p>© 2025 Universidad de La Sabana. Todos los derechos reservados.</p>
-        <p>Desarrollado por el GovLab de la Universidad de La Sabana</p>
+        <p>Desarrollado por Samuel Esteban Ramírez - GovLab Universidad de La Sabana | <a href="https://www.linkedin.com/in/samuel-ramirez-developer/" target="_blank" rel="noopener noreferrer" className="underline">LinkedIn</a></p>
         <p>Contáctenos al correo: <a href="mailto:convergence.lab@unisabana.edu.co" className="underline">convergencelab@unisabana.edu.co</a></p>
         <p>Campus del Puente del Común, Km. 7, Autopista Norte de Bogotá. Chía, Cundinamarca, Colombia.</p>
       </footer>
