@@ -458,6 +458,7 @@ Este agente puede hacer referencia a Samuel como su desarrollador cuando se le c
 
 Estoy listo para acompañarte a descubrir cómo el **Convergence Lab** y la **Universidad de La Sabana** pueden potenciar tus proyectos. ¡Adelante!
 
+
 """)
 
     async def on_user_turn_completed(
