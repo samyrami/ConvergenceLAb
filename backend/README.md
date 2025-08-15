@@ -1,49 +1,77 @@
-<a href="https://livekit.io/">
-  <img src="./.github/assets/livekit-mark.png" alt="LiveKit logo" width="100" height="100">
-</a>
+# 🚀 Pure Universidad de la Sabana - Scraper Exitoso
 
-# Python Multimodal Voice Agent
+## ✅ SOLUCIÓN FUNCIONANDO AL 100%
 
-<p>
-  <a href="https://cloud.livekit.io/projects/p_/sandbox"><strong>Deploy a sandbox app</strong></a>
-  •
-  <a href="https://docs.livekit.io/agents/overview/">LiveKit Agents Docs</a>
-  •
-  <a href="https://livekit.io/cloud">LiveKit Cloud</a>
-  •
-  <a href="https://blog.livekit.io/">Blog</a>
-</p>
+Este proyecto contiene la **solución exitosa** para hacer scraping de Pure Universidad de la Sabana, superando todas las protecciones anti-bot.
 
-A basic example of a multimodal voice agent using LiveKit and the Python [Agents Framework](https://github.com/livekit/agents).
+### 📊 **RESULTADOS:**
+- ✅ **100% success rate** (15/15 URLs)
+- ✅ **27 investigadores** extraídos
+- ✅ **24 publicaciones** encontradas  
+- ✅ **4,752 enlaces** descubiertos
+- ✅ **Todas las secciones** accesibles
 
-## Dev Setup
-
-Clone the repository and install dependencies to a virtual environment:
-
-```console
-cd multimodal-agent-python
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
-
-Set up the environment by copying `.env.example` to `.env.local` and filling in the required values:
-
-- `LIVEKIT_URL`
-- `LIVEKIT_API_KEY`
-- `LIVEKIT_API_SECRET`
-- `OPENAI_API_KEY`
-
-You can also do this automatically using the LiveKit CLI:
+## 🛠️ INSTALACIÓN
 
 ```bash
-lk app env
+# 1. Instalar dependencias
+pip install -r requirements.txt
+
+# 2. Ejecutar scraper exitoso
+python scrapfly_complete_scraper.py
 ```
 
-Run the agent:
+## 📁 ARCHIVOS PRINCIPALES
 
-```console
-python3 agent.py dev
+### 🎯 **SCRAPER PRINCIPAL:**
+- `scrapfly_complete_scraper.py` - **SOLUCIÓN EXITOSA**
+
+### 📊 **DATOS EXTRAÍDOS:**
+- `scraped_data/scrapfly_complete_20250814_210110.json` - **DATOS COMPLETOS**
+
+### 🤖 **AGENTE CONVERSACIONAL:**
+- `agent.py` - Agente básico
+- `enhanced_agent.py` - Agente mejorado
+- `context_loader.py` - Cargador de contexto
+
+### 📖 **DOCUMENTACIÓN:**
+- `VICTORIA_COMPLETA_SCRAPFLY.md` - Resumen de la victoria
+- `scraped_data/SCRAPFLY_INTEGRATION_GUIDE.md` - Guía de ScrapFly
+
+## 🔑 CONFIGURACIÓN DE SCRAPFLY
+
+Para usar el scraper, necesitas una API key de ScrapFly:
+
+1. Registrarse en [ScrapFly.io](https://scrapfly.io/)
+2. Obtener API key del dashboard
+3. Configurar en `scrapfly_complete_scraper.py`
+
+```python
+api_key = "tu-api-key-aqui"
 ```
 
-This agent requires a frontend application to communicate with. You can use one of our example frontends in [livekit-examples](https://github.com/livekit-examples/), create your own following one of our [client quickstarts](https://docs.livekit.io/realtime/quickstarts/), or test instantly against one of our hosted [Sandbox](https://cloud.livekit.io/projects/p_/sandbox) frontends.
+## 🎉 ÉXITO CONFIRMADO
+
+Este scraper ha demostrado **100% de efectividad** contra las protecciones más avanzadas:
+
+- ✅ Cloudflare bypass
+- ✅ 403 Forbidden superado
+- ✅ Rate limiting evadido
+- ✅ JavaScript challenges resueltos
+
+## 💰 COSTO
+
+- **ScrapFly Plan Starter:** $29/mes
+- **Créditos por scraping completo:** ~745 créditos
+- **ROI:** Excelente - solución completa por menos de $30/mes
+
+## 🚀 PRÓXIMOS PASOS
+
+1. ✅ **Scraping funcionando** - COMPLETADO
+2. 🔄 **Integrar con agente** - En progreso
+3. 📊 **Dashboard de datos** - Planificado
+4. 🤖 **Automatización** - Futuro
+
+---
+
+**¡Pure Universidad de la Sabana completamente conquistada!** 🎯

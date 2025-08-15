@@ -1,10 +1,14 @@
+"""
+Versión mejorada del agente que integra datos de scraping de PURE
+Mantiene toda la funcionalidad original y agrega capacidades de contexto enriquecido
+"""
+
 from __future__ import annotations
 
 import logging
 import os
 import asyncio
-import json
-from typing import Optional, Dict, List, Any
+from typing import Optional
 from dotenv import load_dotenv
 
 from livekit import rtc
@@ -20,11 +24,19 @@ from livekit.agents import (
 from livekit.agents._exceptions import APIConnectionError
 from livekit.plugins import openai, silero
 
+# Importar el cargador de contexto
+try:
+    from context_loader import load_and_enhance_context
+    CONTEXT_ENHANCEMENT_AVAILABLE = True
+except ImportError:
+    CONTEXT_ENHANCEMENT_AVAILABLE = False
+    logging.warning("Context loader no disponible. El agente funcionará con contexto básico.")
+
 # Load environment variables from .env.local
 load_dotenv(dotenv_path=".env.local")
 
 # Configure logging
-logger = logging.getLogger("convergence-lab-agent")
+logger = logging.getLogger("convergence-lab-enhanced-agent")
 logger.setLevel(logging.INFO)
 handler = logging.StreamHandler()
 handler.setFormatter(logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s'))
@@ -36,185 +48,14 @@ for var in required_env_vars:
     if not os.getenv(var):
         raise EnvironmentError(f"Missing required environment variable: {var}")
 
-class PureDataLoader:
-    """Cargador integrado de datos de Pure Universidad de la Sabana"""
+class EnhancedGovLabAssistant(Agent):
+    """
+    Versión mejorada del asistente que integra datos de PURE Universidad de La Sabana
+    """
     
-    def __init__(self):
-        self.pure_data = {}
-        self.units_index = {}
-        self.categories_index = {}
-        self.loaded = False
-        self.load_pure_data()
-    
-    def load_pure_data(self):
-        """Cargar datos de Pure desde archivos disponibles"""
-        try:
-            # Intentar cargar contexto híbrido primero
-            hybrid_path = "scraped_data/pure_hybrid_context.json"
-            if os.path.exists(hybrid_path):
-                with open(hybrid_path, 'r', encoding='utf-8') as f:
-                    self.pure_data = json.load(f)
-                logger.info("✅ Contexto híbrido de Pure cargado")
-            else:
-                # Buscar archivos de knowledge base
-                data_dir = "scraped_data"
-                if os.path.exists(data_dir):
-                    kb_files = [f for f in os.listdir(data_dir) if f.startswith('pure_knowledge_base_') and f.endswith('.json')]
-                    if kb_files:
-                        latest_file = max(kb_files)
-                        kb_path = os.path.join(data_dir, latest_file)
-                        with open(kb_path, 'r', encoding='utf-8') as f:
-                            kb_data = json.load(f)
-                        
-                        # Convertir a formato estándar
-                        self.pure_data = {
-                            "research_units": kb_data.get('research_units', []),
-                            "researchers": kb_data.get('researchers', []),
-                            "publications": kb_data.get('scientific_production', [])
-                        }
-                        logger.info(f"✅ Knowledge base de Pure cargado: {latest_file}")
-            
-            self.create_indices()
-            self.loaded = True
-            
-        except Exception as e:
-            logger.error(f"Error cargando datos de Pure: {e}")
-            self.loaded = False
-    
-    def create_indices(self):
-        """Crear índices para búsqueda rápida"""
-        try:
-            # Índice de unidades
-            for unit in self.pure_data.get('research_units', []):
-                name = unit.get('name', '').lower()
-                self.units_index[name] = unit
-                
-                # Agregar palabras clave del nombre
-                words = name.split()
-                for word in words:
-                    if len(word) > 3:
-                        if word not in self.units_index:
-                            self.units_index[word] = []
-                        if isinstance(self.units_index[word], list):
-                            self.units_index[word].append(unit)
-                        else:
-                            self.units_index[word] = [self.units_index[word], unit]
-            
-            # Índice por categorías
-            categories = {
-                "medicina": [],
-                "biomédica": [],
-                "ingeniería": [],
-                "comunicación": [],
-                "economía": [],
-                "derecho": [],
-                "educación": [],
-                "psicología": []
-            }
-            
-            for unit in self.pure_data.get('research_units', []):
-                name = unit.get('name', '').lower()
-                for category, units_list in categories.items():
-                    if category in name:
-                        units_list.append(unit)
-            
-            self.categories_index = categories
-            
-        except Exception as e:
-            logger.error(f"Error creando índices: {e}")
-    
-    def search_units(self, query: str) -> List[Dict[str, Any]]:
-        """Buscar unidades de investigación"""
-        if not self.loaded:
-            return []
-        
-        try:
-            query_lower = query.lower()
-            results = []
-            
-            # Búsqueda exacta
-            if query_lower in self.units_index:
-                unit = self.units_index[query_lower]
-                if isinstance(unit, dict):
-                    results.append(unit)
-                elif isinstance(unit, list):
-                    results.extend(unit)
-            
-            # Búsqueda por palabras clave
-            words = query_lower.split()
-            for word in words:
-                if word in self.units_index:
-                    matches = self.units_index[word]
-                    if isinstance(matches, dict):
-                        if matches not in results:
-                            results.append(matches)
-                    elif isinstance(matches, list):
-                        for match in matches:
-                            if match not in results:
-                                results.append(match)
-            
-            # Búsqueda parcial
-            if not results:
-                for unit in self.pure_data.get('research_units', []):
-                    name = unit.get('name', '').lower()
-                    if query_lower in name:
-                        results.append(unit)
-            
-            return results[:10]
-            
-        except Exception as e:
-            logger.error(f"Error buscando unidades: {e}")
-            return []
-    
-    def get_units_by_category(self, category: str) -> List[Dict[str, Any]]:
-        """Obtener unidades por categoría"""
-        if not self.loaded:
-            return []
-        
-        category_lower = category.lower()
-        return self.categories_index.get(category_lower, [])
-    
-    def get_minciencias_stats(self) -> Dict[str, Any]:
-        """Obtener estadísticas de categorías MinCiencias"""
-        if not self.loaded:
-            return {}
-        
-        stats = {"A": 0, "B": 0, "sin_categoria": 0, "total": 0}
-        
-        for unit in self.pure_data.get('research_units', []):
-            category = unit.get('category', '')
-            if 'Categoría A' in category:
-                stats["A"] += 1
-            elif 'Categoría B' in category:
-                stats["B"] += 1
-            else:
-                stats["sin_categoria"] += 1
-            stats["total"] += 1
-        
-        return stats
-    
-    def get_summary(self) -> Dict[str, Any]:
-        """Obtener resumen general de Pure"""
-        if not self.loaded:
-            return {"available": False}
-        
-        return {
-            "available": True,
-            "total_units": len(self.pure_data.get('research_units', [])),
-            "total_researchers": len(self.pure_data.get('researchers', [])),
-            "total_publications": len(self.pure_data.get('publications', [])),
-            "minciencias_stats": self.get_minciencias_stats()
-        }
-
-class GovLabAssistant(Agent):
     def __init__(self) -> None:
-        # Cargar datos de Pure
-        self.pure_loader = PureDataLoader()
-        
-        # Crear el prompt del sistema que incluye información de Pure
-        pure_context = self.generate_pure_context()
-        
-        super().__init__(instructions=f""" 
+        # Contexto base original (idéntico al agente original)
+        base_instructions = """ 
 # 🧠 Sabius – Asistente de IA del Convergence Lab
 
 Soy Sabius, el asistente conversacional con voz en tiempo real del **Convergence Lab** de la Universidad de La Sabana. Mi propósito es explicarte, guiarte y acompañarte en aprovechar todas las capacidades del Lab, conectando saberes interdisciplinarios para transformar ideas en soluciones prácticas con impacto social, educativo y científico.
@@ -434,7 +275,7 @@ La Universidad de La Sabana impulsa el modelo de **Universidad de Tercera Genera
 ## 🌱 Sostenibilidad
 
 - 100% compensación huella de carbono 2023 (1.548 toneladas CO₂)
-- Primera universidad certificada “Árbol” de Basura Cero Global
+- Primera universidad certificada "Árbol" de Basura Cero Global
 - 2° lugar nacional en infraestructura sostenible (UI Green Metric)
 
 ---
@@ -454,7 +295,7 @@ La Universidad de La Sabana impulsa el modelo de **Universidad de Tercera Genera
 - Maestría en Administración Pública (MPA) con registro calificado
 - Executive Education con entidades públicas
 - Inicio de obra del piso 0 del edificio Ad Portas
-- Proyecto “Sabana Centro Cómo Vamos”: Encuesta de percepción con 300 indicadores
+- Proyecto "Sabana Centro Cómo Vamos": Encuesta de percepción con 300 indicadores
 
 ---
 # 🏛️ Contexto del Centro de Emprendimiento e Innovación Sabana
@@ -631,251 +472,63 @@ El desarrollo de este agente cuenta con el respaldo del **Laboratorio de Gobiern
 
 ---
 
-{pure_context}
-
----
-
 Este agente puede hacer referencia a Samuel como su desarrollador cuando se le consulte sobre su origen, propósitos o capacidades técnicas.
 
 Estoy listo para acompañarte a descubrir cómo el **Convergence Lab** y la **Universidad de La Sabana** pueden potenciar tus proyectos. ¡Adelante!
 
-""")
-    
-    def generate_pure_context(self) -> str:
-        """Generar contexto de Pure para el prompt del sistema"""
-        if not self.pure_loader.loaded:
-            return """## 🔬 PURE UNIVERSIDAD DE LA SABANA
-*Base de conocimiento de investigación no disponible actualmente*"""
-        
-        summary = self.pure_loader.get_summary()
-        minciencias = summary.get('minciencias_stats', {})
-        
-        # Obtener ejemplos de unidades por categoría
-        medicina_units = self.pure_loader.get_units_by_category("medicina")[:3]
-        ingenieria_units = self.pure_loader.get_units_by_category("ingeniería")[:3]
-        comunicacion_units = self.pure_loader.get_units_by_category("comunicación")[:3]
-        
-        context = f"""## 🔬 PURE UNIVERSIDAD DE LA SABANA - BASE DE CONOCIMIENTO DE INVESTIGACIÓN
 
-Tienes acceso completo a la base de datos Pure de Universidad de la Sabana con información actualizada sobre investigación institucional.
-
-### 📊 ESTADÍSTICAS GENERALES:
-- **{summary['total_units']} unidades de investigación** mapeadas
-- **{summary['total_researchers']} investigadores** registrados  
-- **{summary['total_publications']} publicaciones** científicas
-- **{minciencias['total']} grupos** clasificados
-
-### 🏆 CLASIFICACIÓN MINCIENCIAS:
-- **Categoría A:** {minciencias['A']} grupos de excelencia
-- **Categoría B:** {minciencias['B']} grupos consolidados  
-- **Sin categoría:** {minciencias['sin_categoria']} grupos
-
-### 🔬 PRINCIPALES ÁREAS DE INVESTIGACIÓN:
-
-**MEDICINA Y CIENCIAS DE LA SALUD:**"""
+"""
         
-        for unit in medicina_units:
-            context += f"\n- {unit.get('name', 'N/A')}"
-        
-        context += f"\n\n**INGENIERÍA Y TECNOLOGÍA:**"
-        for unit in ingenieria_units:
-            context += f"\n- {unit.get('name', 'N/A')}"
-        
-        context += f"\n\n**COMUNICACIÓN Y MEDIOS:**"
-        for unit in comunicacion_units:
-            context += f"\n- {unit.get('name', 'N/A')}"
-        
-        context += f"""
-
-### 🔍 FUNCIONES DISPONIBLES:
-- `buscar_unidades_investigacion(query)`: Buscar grupos por nombre/área
-- `obtener_estadisticas_minciencias()`: Clasificación completa
-- `buscar_por_area(area)`: Unidades por disciplina específica
-- `obtener_resumen_pure()`: Panorama general institucional
-
-**INSTRUCCIONES PARA USO DE PURE:**
-1. Utiliza las funciones cuando los usuarios pregunten sobre investigación, grupos, facultades o áreas específicas
-2. Conecta la información de Pure con oportunidades del Convergence Lab
-3. Sugiere colaboraciones interdisciplinarias basadas en los grupos de investigación
-4. Cita siempre "Pure Universidad de la Sabana" como fuente de información"""
-        
-        return context
-
-class PureAssistantSession(AgentSession):
-    """Sesión del agente con funcionalidades de Pure integradas"""
-    
-    def __init__(self, chat_ctx: llm.ChatContext, fnc_ctx: llm.FunctionContext, pure_loader: PureDataLoader):
-        super().__init__(chat_ctx, fnc_ctx)
-        self.pure_loader = pure_loader
-        
-        # Registrar funciones de Pure si están disponibles
-        if self.pure_loader.loaded:
-            self.register_pure_functions()
-
-    def register_pure_functions(self):
-        """Registrar funciones de Pure en el contexto del agente"""
-        
-        @self.fnc_ctx.ai_callable(
-            description="Buscar unidades de investigación en Pure Universidad de la Sabana por nombre, área o especialidad"
-        )
-        async def buscar_unidades_investigacion(query: str) -> str:
-            """Buscar unidades de investigación en Pure Universidad de la Sabana"""
+        # Enriquecer el contexto con datos de PURE si está disponible
+        if CONTEXT_ENHANCEMENT_AVAILABLE:
             try:
-                results = self.pure_loader.search_units(query)
-                
-                if not results:
-                    return f"No se encontraron unidades de investigación para '{query}' en Pure Universidad de la Sabana."
-                
-                response = f"🔍 **Unidades de investigación encontradas para '{query}':**\n\n"
-                
-                for i, unit in enumerate(results[:5], 1):
-                    name = unit.get('name', 'N/A')
-                    category = unit.get('category', 'Sin categoría')
-                    unit_type = unit.get('type', 'Unidad organizativa')
-                    
-                    response += f"**{i}. {name}**\n"
-                    response += f"   📂 Tipo: {unit_type}\n"
-                    if 'Categoría' in category:
-                        response += f"   🏆 {category}\n"
-                    
-                    response += "\n"
-                
-                if len(results) > 5:
-                    response += f"... y {len(results) - 5} unidades adicionales encontradas.\n\n"
-                
-                response += "💡 **¿Te interesa colaborar con alguna de estas unidades?** El Convergence Lab puede facilitar conexiones interdisciplinarias para proyectos innovadores."
-                
-                return response
-                
+                enhanced_instructions = load_and_enhance_context(base_instructions)
+                logger.info("Contexto enriquecido con datos de PURE")
             except Exception as e:
-                logger.error(f"Error buscando unidades: {e}")
-                return f"Error al buscar unidades de investigación para '{query}'."
-
-        @self.fnc_ctx.ai_callable(
-            description="Obtener estadísticas completas de categorías MinCiencias de Universidad de la Sabana"
-        )
-        async def obtener_estadisticas_minciencias() -> str:
-            """Obtener estadísticas de categorías MinCiencias"""
-            try:
-                stats = self.pure_loader.get_minciencias_stats()
-                
-                response = "🏆 **Clasificación MinCiencias - Universidad de la Sabana:**\n\n"
-                response += f"📊 **CATEGORÍA A (Excelencia):** {stats['A']} grupos\n"
-                response += f"📊 **CATEGORÍA B (Consolidados):** {stats['B']} grupos\n"
-                response += f"📊 **SIN CATEGORÍA:** {stats['sin_categoria']} grupos\n"
-                response += f"📊 **TOTAL GRUPOS:** {stats['total']} unidades de investigación\n\n"
-                
-                # Mostrar algunos grupos de Categoría A si existen
-                category_a_units = []
-                for unit in self.pure_loader.pure_data.get('research_units', []):
-                    if 'Categoría A' in unit.get('category', ''):
-                        category_a_units.append(unit['name'])
-                
-                if category_a_units:
-                    response += "🌟 **Grupos de Categoría A destacados:**\n"
-                    for unit_name in category_a_units[:3]:
-                        response += f"   • {unit_name}\n"
-                    response += "\n"
-                
-                response += "💡 **El Convergence Lab puede ayudarte a conectar con estos grupos de investigación para proyectos colaborativos de alto impacto.**"
-                
-                return response
-                
-            except Exception as e:
-                logger.error(f"Error obteniendo estadísticas MinCiencias: {e}")
-                return "Error al obtener estadísticas de categorías MinCiencias."
-
-        @self.fnc_ctx.ai_callable(
-            description="Buscar unidades de investigación por área específica (medicina, ingeniería, comunicación, etc.)"
-        )
-        async def buscar_por_area(area: str) -> str:
-            """Buscar unidades por área específica"""
-            try:
-                units = self.pure_loader.get_units_by_category(area.lower())
-                
-                if not units:
-                    # Intentar búsqueda general
-                    units = self.pure_loader.search_units(area)
-                
-                if not units:
-                    return f"No se encontraron unidades en el área de '{area}' en Pure Universidad de la Sabana."
-                
-                response = f"🔬 **Unidades de investigación en {area.title()}:**\n\n"
-                
-                for i, unit in enumerate(units[:8], 1):
-                    name = unit.get('name', 'N/A')
-                    category = unit.get('category', 'Sin categoría')
-                    
-                    response += f"**{i}. {name}**\n"
-                    if 'Categoría' in category:
-                        response += f"   🏆 {category}\n"
-                    response += "\n"
-                
-                if len(units) > 8:
-                    response += f"... y {len(units) - 8} unidades adicionales en esta área.\n\n"
-                
-                response += f"🚀 **¿Tienes una idea para {area}?** En el Convergence Lab podemos ayudarte a desarrollar proyectos interdisciplinarios conectando con estos grupos de investigación."
-                
-                return response
-                
-            except Exception as e:
-                logger.error(f"Error buscando por área: {e}")
-                return f"Error al buscar unidades en el área de '{area}'."
-
-        @self.fnc_ctx.ai_callable(
-            description="Obtener resumen general de Pure Universidad de la Sabana con todas las estadísticas"
-        )
-        async def obtener_resumen_pure() -> str:
-            """Obtener resumen general de Pure Universidad de la Sabana"""
-            try:
-                summary = self.pure_loader.get_summary()
-                
-                if not summary.get('available', False):
-                    return "La información de Pure Universidad de la Sabana no está disponible en este momento."
-                
-                minciencias = summary.get('minciencias_stats', {})
-                
-                response = "📋 **Resumen General - Pure Universidad de la Sabana:**\n\n"
-                
-                response += f"🏛️ **Total de unidades de investigación:** {summary['total_units']}\n"
-                response += f"👥 **Investigadores registrados:** {summary['total_researchers']}\n"
-                response += f"📚 **Publicaciones científicas:** {summary['total_publications']}\n\n"
-                
-                response += f"🏆 **Distribución MinCiencias:**\n"
-                response += f"   • Categoría A: {minciencias.get('A', 0)} grupos de excelencia\n"
-                response += f"   • Categoría B: {minciencias.get('B', 0)} grupos consolidados\n"
-                response += f"   • Sin categoría: {minciencias.get('sin_categoria', 0)} grupos\n\n"
-                
-                # Destacar principales áreas
-                main_areas = ["medicina", "ingeniería", "comunicación", "economía", "derecho"]
-                response += f"🔬 **Principales áreas de investigación disponibles:**\n"
-                for area in main_areas:
-                    area_units = self.pure_loader.get_units_by_category(area)
-                    if area_units:
-                        response += f"   • {area.title()}: {len(area_units)} unidades\n"
-                
-                response += f"\n✅ **Estado:** Operacional y actualizado\n"
-                response += f"💡 **El Convergence Lab está conectado con toda esta red de investigación para potenciar tus proyectos interdisciplinarios.**"
-                
-                return response
-                
-            except Exception as e:
-                logger.error(f"Error obteniendo resumen: {e}")
-                return "Error al obtener resumen general de Pure Universidad de la Sabana."
-
-        logger.info("✅ Funciones de Pure integradas en el agente")
+                logger.warning(f"Error enriqueciendo contexto: {e}. Usando contexto base.")
+                enhanced_instructions = base_instructions
+        else:
+            enhanced_instructions = base_instructions
+        
+        super().__init__(instructions=enhanced_instructions)
 
     async def on_user_turn_completed(
         self,
         chat_ctx: llm.ChatContext,
         new_message: llm.ChatMessage
     ) -> None:
-        # Keep the most recent 15 items in the chat context.
+        """
+        Procesar turno del usuario con posible enriquecimiento de contexto
+        """
+        # Mantener los 15 elementos más recientes en el contexto del chat
         chat_ctx = chat_ctx.copy()
         if len(chat_ctx.items) > 15:
             chat_ctx.items = chat_ctx.items[-15:]
+        
+        # Intentar enriquecer el contexto basado en la consulta del usuario
+        if CONTEXT_ENHANCEMENT_AVAILABLE and new_message.content:
+            try:
+                # Extraer el texto de la consulta del usuario
+                user_query = new_message.content
+                
+                # Generar contexto enriquecido específico para esta consulta
+                enhanced_context = load_and_enhance_context("", user_query)
+                
+                # Si hay contexto adicional relevante, agregarlo como mensaje del sistema
+                if enhanced_context and len(enhanced_context) > 100:  # Solo si hay contenido sustancial
+                    enhanced_message = llm.ChatMessage.create(
+                        text=f"[CONTEXTO ADICIONAL RELEVANTE]: {enhanced_context[-2000:]}",  # Últimos 2000 caracteres
+                        role="system"
+                    )
+                    chat_ctx.items.append(enhanced_message)
+                    logger.debug("Contexto adicional agregado para esta consulta")
+            
+            except Exception as e:
+                logger.debug(f"Error enriqueciendo contexto para consulta: {e}")
+        
         await self.update_chat_ctx(chat_ctx)
 
+# Las funciones de utilidad permanecen idénticas al agente original
 async def create_realtime_model_with_retry(max_retries: int = 3) -> openai.realtime.RealtimeModel:
     """Create a realtime model with connection retry logic."""
     for attempt in range(max_retries):
@@ -903,46 +556,38 @@ async def start_agent_session_with_recovery(ctx: JobContext, max_retries: int = 
     for attempt in range(max_retries):
         session: Optional[AgentSession] = None
         try:
-            logger.info(f"Starting agent session attempt {attempt + 1}")
+            logger.info(f"Starting enhanced agent session attempt {attempt + 1}")
             
             # Create the realtime model with retry logic
             model = await create_realtime_model_with_retry()
             
-            # Create the agent first
-            agent = GovLabAssistant()
-            
-            # Create function context
-            fnc_ctx = llm.FunctionContext()
-            
-            # Create chat context with agent instructions
-            chat_ctx = llm.ChatContext().append(
-                role="system",
-                text=agent.instructions,
+            # Create the AgentSession with VAD
+            session = AgentSession(
+                llm=model,
+                vad=silero.VAD.load(),
             )
             
-            # Create specialized session with Pure integration
-            session = PureAssistantSession(chat_ctx, fnc_ctx, agent.pure_loader)
-            session.llm = model
-            session.vad = silero.VAD.load()
-            
-            # Start the session
-            await session.start(room=ctx.room)
+            # Create and start the enhanced agent
+            agent = EnhancedGovLabAssistant()
+            await session.start(
+                room=ctx.room,
+                agent=agent,
+            )
             
             # Generate initial greeting with timeout handling
             try:
+                greeting_instruction = "Saluda brevemente al usuario e introduce el ConvergenceLab. Menciona que tienes acceso a información actualizada de investigadores y proyectos de la Universidad."
                 await asyncio.wait_for(
-                    session.generate_reply(
-                        instructions="Saluda brevemente al usuario e introduce el ConvergenceLab"
-                    ),
+                    session.generate_reply(instructions=greeting_instruction),
                     timeout=10.0  # 10 second timeout
                 )
-                logger.info("Initial greeting generated successfully")
+                logger.info("Enhanced initial greeting generated successfully")
             except asyncio.TimeoutError:
                 logger.warning("Initial greeting timed out, but session is active")
             except Exception as e:
                 logger.warning(f"Failed to generate initial greeting: {e}, but session is active")
             
-            logger.info("Agent session started successfully")
+            logger.info("Enhanced agent session started successfully")
             
             # Keep the session alive and monitor for connection issues
             await monitor_session_health(session, ctx)
@@ -986,29 +631,29 @@ async def monitor_session_health(session: AgentSession, ctx: JobContext) -> None
                 await ctx.connect()
                 
             # Add more health checks as needed
-            logger.debug("Session health check passed")
+            logger.debug("Enhanced session health check passed")
             
         except asyncio.CancelledError:
-            logger.info("Session monitoring cancelled")
+            logger.info("Enhanced session monitoring cancelled")
             break
         except Exception as e:
-            logger.error(f"Health check failed: {e}")
+            logger.error(f"Enhanced health check failed: {e}")
             # You might want to trigger a reconnection here
             break
 
 async def entrypoint(ctx: JobContext):
     """Main entrypoint with enhanced error handling and recovery."""
     try:
-        logger.info(f"Connecting to room {ctx.room.name}")
+        logger.info(f"Connecting to room {ctx.room.name} with enhanced agent")
         await ctx.connect()
         
-        logger.info("Initializing agent session with recovery...")
+        logger.info("Initializing enhanced agent session with recovery...")
         await start_agent_session_with_recovery(ctx)
         
     except KeyboardInterrupt:
         logger.info("Received shutdown signal")
     except Exception as e:
-        logger.error(f"Critical error in entrypoint: {e}", exc_info=True)
+        logger.error(f"Critical error in enhanced entrypoint: {e}", exc_info=True)
         
         # Attempt graceful fallback - you could implement a basic text-only mode here
         logger.info("Attempting graceful fallback...")
@@ -1024,5 +669,5 @@ if __name__ == "__main__":
             )
         )
     except Exception as e:
-        logger.error(f"Failed to start application: {e}", exc_info=True)
+        logger.error(f"Failed to start enhanced application: {e}", exc_info=True)
         raise

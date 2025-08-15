@@ -1,0 +1,1585 @@
+{
+  "metadata": {
+    "extraction_date": "2025-08-14T21:30:19.124888",
+    "total_requests": 161,
+    "successful_requests": 8,
+    "total_cost": 395,
+    "summary": {
+      "research_units": 151,
+      "researchers": 0,
+      "publications": 0
+    }
+  },
+  "research_units": [
+    {
+      "name": "Universidad\n                                    \n                                        (1)",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/?type=%2Fdk%2Fatira%2Fpure%2Forganisation%2Forganisationtypes%2Forganisation%2Funiversity&nofollow=true",
+      "type": "Unidad organizativa:",
+      "unit_id": "?type=%2Fdk%2Fatira%2Fpure%2Forganisation%2Forganisationtypes%2Forganisation%2Funiversity&nofollow=true",
+      "detailed_info": {
+        "members_count": 0,
+        "publications_count": 0,
+        "projects_count": 0,
+        "contact_info": {
+          "phone": "[if lt IE 9]>\n    <script type=\"text/javascript\" src=\"/assets/html5shiv.min-ca5300beead9a4a9d2c9c584a9016410.js\" ></script>\n    <script type=\"text/javascript\" src=\"/assets/respond.min-678d372b349e434d9923e1b591f14a1e.js\" ></script>\n    <![endif]"
+        },
+        "research_areas": []
+      },
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Centro de Investigacion Biomedica Universidad de La Sabana (CIBUS)",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/centro-de-investigacion-biomedica-universidad-de-la-sabana-cibus-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "centro-de-investigacion-biomedica-universidad-de-la-sabana-cibus-2",
+      "detailed_info": {
+        "members_count": 0,
+        "publications_count": 0,
+        "projects_count": 0,
+        "contact_info": {
+          "email": "?subject=Centro%20de%20Investigacion%20Biomedica%20Universidad%20de%20La%20Sabana%20(CIBUS)&body=Vea%20esta%20unidad%20de%20investigaci%C3%B3n%20en%20Universidad%20de%20La%20Sabana%3A%20Centro%20de%20Investigacion%20Biomedica%20Universidad%20de%20La%20Sabana%20(CIBUS) | https://pure.unisabana.edu.co/es/organisations/centro-de-investigacion-biomedica-universidad-de-la-sabana-cibus-2?utm_source=email&utm_medium=email&utm_campaign=sharelink",
+          "phone": "[if lt IE 9]>\n    <script type=\"text/javascript\" src=\"/assets/html5shiv.min-ca5300beead9a4a9d2c9c584a9016410.js\" ></script>\n    <script type=\"text/javascript\" src=\"/assets/respond.min-678d372b349e434d9923e1b591f14a1e.js\" ></script>\n    <![endif]"
+        },
+        "research_areas": [
+          "Categoría MinCiencias2022: Categoría A2019: Categoría A2017: Categoría A2015: Categoría A2014: Categoría A2013: Categoría A12012: Reconocido2010: Categoría B2009: Categoría B2006: Categoría B"
+        ]
+      },
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Centro de Investigaciones de la Comunicacion Corporativa Organizacional CICCO",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/centro-de-investigaciones-de-la-comunicacion-corporativa-organiza-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "centro-de-investigaciones-de-la-comunicacion-corporativa-organiza-2",
+      "detailed_info": {
+        "members_count": 0,
+        "publications_count": 0,
+        "projects_count": 0,
+        "contact_info": {
+          "email": "?subject=Centro%20de%20Investigaciones%20de%20la%20Comunicacion%20Corporativa%20Organizacional%20CICCO&body=Vea%20esta%20unidad%20de%20investigaci%C3%B3n%20en%20Universidad%20de%20La%20Sabana%3A%20Centro%20de%20Investigaciones%20de%20la%20Comunicacion%20Corporativa%20Organizacional%20CICCO | https://pure.unisabana.edu.co/es/organisations/centro-de-investigaciones-de-la-comunicacion-corporativa-organiza-2?utm_source=email&utm_medium=email&utm_campaign=sharelink",
+          "phone": "[if lt IE 9]>\n    <script type=\"text/javascript\" src=\"/assets/html5shiv.min-ca5300beead9a4a9d2c9c584a9016410.js\" ></script>\n    <script type=\"text/javascript\" src=\"/assets/respond.min-678d372b349e434d9923e1b591f14a1e.js\" ></script>\n    <![endif]"
+        },
+        "research_areas": [
+          "Categoría MinCiencias2022: Categoría A2019: Categoría A2017: Categoría C2015: Categoría C2014: Categoría C2013: Categoría C2012: Reconocido2010: Categoría D2009: Categoría D2006: Categoría C"
+        ]
+      },
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Clínica Universidad de La Sabana",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/cl%C3%ADnica-universidad-de-la-sabana-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "cl%C3%ADnica-universidad-de-la-sabana-2",
+      "detailed_info": {
+        "members_count": 0,
+        "publications_count": 0,
+        "projects_count": 0,
+        "contact_info": {
+          "email": "?subject=Cl%C3%ADnica%20Universidad%20de%20La%20Sabana&body=Vea%20esta%20unidad%20de%20investigaci%C3%B3n%20en%20Universidad%20de%20La%20Sabana%3A%20Cl%C3%ADnica%20Universidad%20de%20La%20Sabana | https://pure.unisabana.edu.co/es/organisations/cl%C3%ADnica-universidad-de-la-sabana-2?utm_source=email&utm_medium=email&utm_campaign=sharelink",
+          "phone": "[if lt IE 9]>\n    <script type=\"text/javascript\" src=\"/assets/html5shiv.min-ca5300beead9a4a9d2c9c584a9016410.js\" ></script>\n    <script type=\"text/javascript\" src=\"/assets/respond.min-678d372b349e434d9923e1b591f14a1e.js\" ></script>\n    <![endif]"
+        },
+        "research_areas": []
+      },
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Escuela Internacional de Ciencias Económicas y Administrativas",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/escuela-internacional-de-ciencias-econ%C3%B3micas-y-administrativas-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "escuela-internacional-de-ciencias-econ%C3%B3micas-y-administrativas-2",
+      "detailed_info": {
+        "members_count": 0,
+        "publications_count": 0,
+        "projects_count": 0,
+        "contact_info": {
+          "email": "?subject=Escuela%20Internacional%20de%20Ciencias%20Econ%C3%B3micas%20y%20Administrativas&body=Vea%20esta%20unidad%20de%20investigaci%C3%B3n%20en%20Universidad%20de%20La%20Sabana%3A%20Escuela%20Internacional%20de%20Ciencias%20Econ%C3%B3micas%20y%20Administrativas | https://pure.unisabana.edu.co/es/organisations/escuela-internacional-de-ciencias-econ%C3%B3micas-y-administrativas-2?utm_source=email&utm_medium=email&utm_campaign=sharelink",
+          "phone": "[if lt IE 9]>\n    <script type=\"text/javascript\" src=\"/assets/html5shiv.min-ca5300beead9a4a9d2c9c584a9016410.js\" ></script>\n    <script type=\"text/javascript\" src=\"/assets/respond.min-678d372b349e434d9923e1b591f14a1e.js\" ></script>\n    <![endif]"
+        },
+        "research_areas": []
+      },
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Facultad de Comunicación",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/facultad-de-comunicaci%C3%B3n-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "facultad-de-comunicaci%C3%B3n-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Facultad de Educación",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/facultad-de-educaci%C3%B3n-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "facultad-de-educaci%C3%B3n-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Facultad de Enfermería y Rehabilitación",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/facultad-de-enfermer%C3%ADa-y-rehabilitaci%C3%B3n-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "facultad-de-enfermer%C3%ADa-y-rehabilitaci%C3%B3n-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Facultad de Estudios Jurídicos, Políticos e Internacionales",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/facultad-de-estudios-jur%C3%ADdicos-pol%C3%ADticos-e-internacionales",
+      "type": "Unidad organizativa:",
+      "unit_id": "facultad-de-estudios-jur%C3%ADdicos-pol%C3%ADticos-e-internacionales",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Facultad de Filosofía y Ciencias Humanas",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/facultad-de-filosof%C3%ADa-y-ciencias-humanas-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "facultad-de-filosof%C3%ADa-y-ciencias-humanas-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Facultad de Ingeniería",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/facultad-de-ingenier%C3%ADa-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "facultad-de-ingenier%C3%ADa-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Facultad de Medicina",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/facultad-de-medicina-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "facultad-de-medicina-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Facultad de Psicología y Ciencias del Comportamiento",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/facultad-de-psicolog%C3%ADa-y-ciencias-del-comportamiento",
+      "type": "Unidad organizativa:",
+      "unit_id": "facultad-de-psicolog%C3%ADa-y-ciencias-del-comportamiento",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Alimentación, Gestión de Procesos y Servicio",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-alimentaci%C3%B3n-gesti%C3%B3n-de-procesos-y-serv-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-alimentaci%C3%B3n-gesti%C3%B3n-de-procesos-y-serv-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Bioprospección",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-bioprospecci%C3%B3n-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-bioprospecci%C3%B3n-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en CAPSAB- Control y Automatización de Procesos Universidad de La Sabana",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-capsab-control-y-automatizaci%C3%B3n-de-proc-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-capsab-control-y-automatizaci%C3%B3n-de-proc-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Cognición, Aprendizaje y Socialización",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-cognici%C3%B3n-aprendizaje-y-socializaci%C3%B3n",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-cognici%C3%B3n-aprendizaje-y-socializaci%C3%B3n",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Cuidado de Enfermeria - UniSabana",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-cuidado-de-enfermeria-unisabana-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-cuidado-de-enfermeria-unisabana-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo De Investigación en Cultura Audiovisual",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-cultura-audiovisual-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-cultura-audiovisual-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Derecho Internacional",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-derecho-internacional-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-derecho-internacional-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Derecho Privado Universidad de La Sabana",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-derecho-privado-universidad-de-la-saban-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-derecho-privado-universidad-de-la-saban-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Direccion de Personas en las Organizaciones",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-direccion-de-personas-en-las-organizaci-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-direccion-de-personas-en-las-organizaci-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Dolor y Cuidados Paliativos",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-dolor-y-cuidados-paliativos-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-dolor-y-cuidados-paliativos-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Educación Medica Unisabana",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-educaci%C3%B3n-medica-unisabana-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-educaci%C3%B3n-medica-unisabana-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Educacion y Educadores",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-educacion-y-educadores-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-educacion-y-educadores-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Empresa, competitividad y Marketing",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-empresa-competitividad-y-marketing-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-empresa-competitividad-y-marketing-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Empresas Familiares y Gobierno Corporativo",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-empresas-familiares-y-gobierno-corporat-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-empresas-familiares-y-gobierno-corporat-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Energía, Materiales y Ambiente - Unisabana",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-energ%C3%ADa-materiales-y-ambiente-unisabana-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-energ%C3%ADa-materiales-y-ambiente-unisabana-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Enfermedades Prevalentes de la Infancia",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-enfermedades-prevalentes-de-la-infancia-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-enfermedades-prevalentes-de-la-infancia-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Espondiloartropatias Universidad de La Sabana - GESPA",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-espondiloartropatias-universidad-de-la--2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-espondiloartropatias-universidad-de-la--2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Evidencia Terapéutica",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-evidencia-terap%C3%A9utica-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-evidencia-terap%C3%A9utica-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Familia y Sociedad",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-familia-y-sociedad-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-familia-y-sociedad-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Física y Matemáticas Aplicadas",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-f%C3%ADsica-y-matem%C3%A1ticas-aplicadas-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-f%C3%ADsica-y-matem%C3%A1ticas-aplicadas-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Gastroenterologia EmuraCenter- UniSabana",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-gastroenterologia-emuracenter-unisabana-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-gastroenterologia-emuracenter-unisabana-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Genética Humana",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-gen%C3%A9tica-humana-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-gen%C3%A9tica-humana-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en HCD Human Centered Design",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-hcd-human-centered-design-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-hcd-human-centered-design-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Innovación y Estrategia",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-innovaci%C3%B3n-y-estrategia-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-innovaci%C3%B3n-y-estrategia-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Justicia, Ámbito Público y Derechos Humanos",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-justicia-%C3%A1mbito-p%C3%BAblico-y-derechos-huma",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-justicia-%C3%A1mbito-p%C3%BAblico-y-derechos-huma",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Medicina del Adulto",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-medicina-del-adulto-3",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-medicina-del-adulto-3",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Medicina Familiar y Salud de la Poblacion",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-medicina-familiar-y-salud-de-la-poblaci-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-medicina-familiar-y-salud-de-la-poblaci-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Movimiento Corporal Humano",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-movimiento-corporal-humano-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-movimiento-corporal-humano-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Negocios, Economia y Finanzas",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-negocios-economia-y-finanzas-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-negocios-economia-y-finanzas-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Operations and Supply Chain Management Research Group",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-operations-and-supply-chain-management--2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-operations-and-supply-chain-management--2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Patologia Quirurgica",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-patologia-quirurgica-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-patologia-quirurgica-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Periodismo - GIP",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-periodismo-gip-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-periodismo-gip-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Procesos Agroindustriales",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-procesos-agroindustriales-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-procesos-agroindustriales-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Procesos Psicológicos y Neurociencias",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-procesos-psicol%C3%B3gicos-y-neurociencias-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-procesos-psicol%C3%B3gicos-y-neurociencias-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en PROSEIM",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-proseim-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-proseim-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Psiquiatria y Salud Mental",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-psiquiatria-y-salud-mental-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-psiquiatria-y-salud-mental-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Racionalidad y Cultura",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-racionalidad-y-cultura-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-racionalidad-y-cultura-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Res Publica",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-res-publica-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-res-publica-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Salud Sexual y Procreativa",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-salud-sexual-y-procreativa-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-salud-sexual-y-procreativa-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigacion en Salud Universidad de la Sabana",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigacion-en-salud-universidad-de-la-sabana-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigacion-en-salud-universidad-de-la-sabana-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Sistemas Logisticos",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-sistemas-logisticos-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-sistemas-logisticos-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Sociopolítica, Cultura y Ambiente",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-sociopol%C3%ADtica-cultura-y-ambiente-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-sociopol%C3%ADtica-cultura-y-ambiente-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Tecnologias para la Academia - Proventus - Unisabana",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-tecnologias-para-la-academia-proventus--2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-tecnologias-para-la-academia-proventus--2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Translational Neuroscience Research Lab",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-translational-neuroscience-research-lab-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-translational-neuroscience-research-lab-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Translational Science in Infectious Diseases and Critical Care Medicine (TS ID/CCM",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-translational-science-in-infectious-dis-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-translational-science-in-infectious-dis-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Trauma y Rehabilitación",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-trauma-y-rehabilitaci%C3%B3n-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-trauma-y-rehabilitaci%C3%B3n-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación en Valor y Palabra",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-en-valor-y-palabra-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-en-valor-y-palabra-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación Kheiron Bioética Unisabana",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-kheiron-bio%C3%A9tica-unisabana",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-kheiron-bio%C3%A9tica-unisabana",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Grupo de Investigación Observatorio de Medios",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigaci%C3%B3n-observatorio-de-medios-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "grupo-de-investigaci%C3%B3n-observatorio-de-medios-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Inalde Business School",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/facultad-inalde-business-school",
+      "type": "Unidad organizativa:",
+      "unit_id": "facultad-inalde-business-school",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Instituto Latinoamericano de La Familia",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/instituto-latinoamericano-de-la-familia",
+      "type": "Unidad organizativa:",
+      "unit_id": "instituto-latinoamericano-de-la-familia",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "LALETUS (Language Learning and Teaching - Universidad de La Sabana)",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/laletus-language-learning-and-teaching-universidad-de-la-sabana",
+      "type": "Unidad organizativa:",
+      "unit_id": "laletus-language-learning-and-teaching-universidad-de-la-sabana",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Novitas",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/novitas",
+      "type": "Unidad organizativa:",
+      "unit_id": "novitas",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Acción Social y Comunidades",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-acci%C3%B3n-social-y-comunidades-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-acci%C3%B3n-social-y-comunidades-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - AEQUITAS",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-aequitas-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-aequitas-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Agresion e Intimidacion",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-agresion-e-intimidacion-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-agresion-e-intimidacion-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - AIDUA: Accesibilidad, Inclusión y Diseño Universal para el Aprendizaje",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-aidua-accesibilidad-inclusi%C3%B3n-y-dise%C3%B1o-universal-para-e-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-aidua-accesibilidad-inclusi%C3%B3n-y-dise%C3%B1o-universal-para-e-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Analisis sobre la Relacion Ludica y Desarrollo Cognitivo",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-analisis-sobre-la-relacion-ludica-y-desarrollo-cognitiv-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-analisis-sobre-la-relacion-ludica-y-desarrollo-cognitiv-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Análisis y Modelamiento de Sistemas en Ingeniería (AMSI)",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-an%C3%A1lisis-y-modelamiento-de-sistemas-en-ingenier%C3%ADa-amsi-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-an%C3%A1lisis-y-modelamiento-de-sistemas-en-ingenier%C3%ADa-amsi-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Análisis y Producción Audiovisual",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-an%C3%A1lisis-y-producci%C3%B3n-audiovisual-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-an%C3%A1lisis-y-producci%C3%B3n-audiovisual-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Apoyo al Litigio ante el Sistema Interamericano de Derechos Humanos",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-apoyo-al-litigio-ante-el-sistema-interamericano-de-dere-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-apoyo-al-litigio-ante-el-sistema-interamericano-de-dere-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Bases Biologicas del Comportamiento",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-bases-biologicas-del-comportamiento-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-bases-biologicas-del-comportamiento-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Calidad Informativa",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-calidad-informativa-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-calidad-informativa-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - CEDEPI",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-cedepi-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-cedepi-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Centro de Estudios en Gobierno y Justicia",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-centro-de-estudios-en-gobierno-y-justicia-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-centro-de-estudios-en-gobierno-y-justicia-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - CICCO",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-cicco-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-cicco-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Ciudadanía, Convivencia y Paz integrando Tecnologías",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-ciudadan%C3%ADa-convivencia-y-paz-integrando-tecnolog%C3%ADas-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-ciudadan%C3%ADa-convivencia-y-paz-integrando-tecnolog%C3%ADas-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Competencia Digital",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-competencia-digital-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-competencia-digital-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Contratación Estatal",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-contrataci%C3%B3n-estatal-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-contrataci%C3%B3n-estatal-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Creación de vida: un aprendizaje desde la infancia",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-creaci%C3%B3n-de-vida-un-aprendizaje-desde-la-infancia",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-creaci%C3%B3n-de-vida-un-aprendizaje-desde-la-infancia",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Creatividad, Innovación y Estrategia en el marco de la Economía Circular",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-creatividad-innovaci%C3%B3n-y-estrategia-en-el-marco-de-la-e-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-creatividad-innovaci%C3%B3n-y-estrategia-en-el-marco-de-la-e-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Crioconcentración",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-crioconcentraci%C3%B3n-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-crioconcentraci%C3%B3n-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero de Asuntos Internacionales",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-de-asuntos-internacionales-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-de-asuntos-internacionales-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero de investigación Equidad de Género y Justicia Social",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-de-investigaci%C3%B3n-equidad-de-g%C3%A9nero-y-justicia-social-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-de-investigaci%C3%B3n-equidad-de-g%C3%A9nero-y-justicia-social-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Derecho del Trabajo y de la Seguridad Social",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-derecho-del-trabajo-y-de-la-seguridad-social-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-derecho-del-trabajo-y-de-la-seguridad-social-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Derecho Internacional Humanitario",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-derecho-internacional-humanitario-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-derecho-internacional-humanitario-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Derecho Internacional y Protección de la Vida",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-derecho-internacional-y-protecci%C3%B3n-de-la-vida-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-derecho-internacional-y-protecci%C3%B3n-de-la-vida-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Derecho Penal Internacional y Justicia Transicional",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-derecho-penal-internacional-y-justicia-transicional-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-derecho-penal-internacional-y-justicia-transicional-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Derechos Humanos",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-derechos-humanos-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-derechos-humanos-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Derecho y Literatura: \"Literatura, Libertad y Justicia\"",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-derecho-y-literatura-literatura-libertad-y-justicia-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-derecho-y-literatura-literatura-libertad-y-justicia-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Desarrollo Humano y Cultura",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-desarrollo-humano-y-cultura-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-desarrollo-humano-y-cultura-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Desarrollo y Visibilización del Pensamiento Infantil.",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-desarrollo-y-visibilizaci%C3%B3n-del-pensamiento-infantil-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-desarrollo-y-visibilizaci%C3%B3n-del-pensamiento-infantil-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Dirección SID",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-direcci%C3%B3n-sid-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-direcci%C3%B3n-sid-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Diseño y Análisis Regulatorio",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-dise%C3%B1o-y-an%C3%A1lisis-regulatorio-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-dise%C3%B1o-y-an%C3%A1lisis-regulatorio-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Disponibilidad de opioides",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-disponibilidad-de-opioides-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-disponibilidad-de-opioides-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - ECONOMETRIA",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-econometria-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-econometria-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Energia, Materiales y Ambiente",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-energia-materiales-y-ambiente-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-energia-materiales-y-ambiente-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - ENERGÍAS RENOVABLES (SIER)",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-energ%C3%ADas-renovables-sier-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-energ%C3%ADas-renovables-sier-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Enfermedades Prevalentes de la Infancia",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-enfermedades-prevalentes-de-la-infancia-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-enfermedades-prevalentes-de-la-infancia-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Espondiloartropatias",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-espondiloartropatias-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-espondiloartropatias-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Evolutionary Economics",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-evolutionary-economics-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-evolutionary-economics-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Familia y Entorno Sociojurídico",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-familia-y-entorno-sociojur%C3%ADdico-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-familia-y-entorno-sociojur%C3%ADdico-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Fisica y Matematicas",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-fisica-y-matematicas-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-fisica-y-matematicas-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Fundamentos Filosóficos del Derecho Constitucional",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-fundamentos-filos%C3%B3ficos-del-derecho-constitucional-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-fundamentos-filos%C3%B3ficos-del-derecho-constitucional-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - GastroScience",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-gastroscience-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-gastroscience-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - INFOSEED",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-infoseed-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-infoseed-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Innovaciones en Psicometría, medición y evaluación",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-innovaciones-en-psicometr%C3%ADa-medici%C3%B3n-y-evaluaci%C3%B3n-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-innovaciones-en-psicometr%C3%ADa-medici%C3%B3n-y-evaluaci%C3%B3n-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - INNOVACIÓN Y GESTIÓN DEL CONOCIMIENTO COMO ESTRATEGIAS DE COMPETITIVIDAD EN LAS ORGANIZACIONES",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-innovaci%C3%B3n-y-gesti%C3%B3n-del-conocimiento-como-estrategias--2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-innovaci%C3%B3n-y-gesti%C3%B3n-del-conocimiento-como-estrategias--2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - INTERCEF- Interacción composición – estructura - estabilidad - funcionalidad",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-intercef-interacci%C3%B3n-composici%C3%B3n-estructura-estabilidad-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-intercef-interacci%C3%B3n-composici%C3%B3n-estructura-estabilidad-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Interdisciplinario de Guion y Laboratorio Audiovisual (SIGLA)",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-interdisciplinario-de-guion-y-laboratorio-audiovisual-s-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-interdisciplinario-de-guion-y-laboratorio-audiovisual-s-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Investigación Cuci-Art",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-investigaci%C3%B3n-cuci-art-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-investigaci%C3%B3n-cuci-art-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Investigación Culinary Science and Nutrition",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-investigaci%C3%B3n-culinary-science-and-nutrition-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-investigaci%C3%B3n-culinary-science-and-nutrition-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Investigación de Actualización de Derecho Civil Bienes",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-investigaci%C3%B3n-de-actualizaci%C3%B3n-de-derecho-civil-bienes-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-investigaci%C3%B3n-de-actualizaci%C3%B3n-de-derecho-civil-bienes-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Investigación en Bioprospección",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-investigaci%C3%B3n-en-bioprospecci%C3%B3n-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-investigaci%C3%B3n-en-bioprospecci%C3%B3n-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Investigación en Ciencias Políticas",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-investigaci%C3%B3n-en-ciencias-pol%C3%ADticas-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-investigaci%C3%B3n-en-ciencias-pol%C3%ADticas-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Investigación en Falla Cardíaca",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-investigaci%C3%B3n-en-falla-card%C3%ADaca-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-investigaci%C3%B3n-en-falla-card%C3%ADaca-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Investigación en Proceso de Paz y Medios de Comunicación",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-investigaci%C3%B3n-en-proceso-de-paz-y-medios-de-comunicaci%C3%B3-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-investigaci%C3%B3n-en-proceso-de-paz-y-medios-de-comunicaci%C3%B3-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Justicia Transicional",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-justicia-transicional-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-justicia-transicional-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Laboratorio de Medicion y Evaluación",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-laboratorio-de-medicion-y-evaluaci%C3%B3n-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-laboratorio-de-medicion-y-evaluaci%C3%B3n-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Logística Empresarial",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-log%C3%ADstica-empresarial-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-log%C3%ADstica-empresarial-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Medicina Regenerativa e Ingeniería de Tejidos",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-medicina-regenerativa-e-ingenier%C3%ADa-de-tejidos-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-medicina-regenerativa-e-ingenier%C3%ADa-de-tejidos-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Métodos y técnicas para la investigación social cuantitativa y cualitativa en ciencias de la familia",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-m%C3%A9todos-y-t%C3%A9cnicas-para-la-investigaci%C3%B3n-social-cuantit-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-m%C3%A9todos-y-t%C3%A9cnicas-para-la-investigaci%C3%B3n-social-cuantit-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Moot Court",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-moot-court-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-moot-court-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Neuromarketing",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-neuromarketing-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-neuromarketing-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Nutriere",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-nutriere-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-nutriere-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Obligaciones y Contratos",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-obligaciones-y-contratos-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-obligaciones-y-contratos-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Observatorio de Medios",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-observatorio-de-medios-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-observatorio-de-medios-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Pedagogía Verde",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-pedagog%C3%ADa-verde-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-pedagog%C3%ADa-verde-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Periodismo Digital del GIP",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-periodismo-digital-del-gip-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-periodismo-digital-del-gip-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Probióticos SIPA",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-probi%C3%B3ticos-sipa-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-probi%C3%B3ticos-sipa-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Promoción de salud y bienestar",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-promoci%C3%B3n-de-salud-y-bienestar-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-promoci%C3%B3n-de-salud-y-bienestar-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - ProNIUS",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-pronius-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-pronius-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Psicología Clínica y de la Salud. Antes Semillero - Psicología y Humanización de la Salud",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-psicolog%C3%ADa-cl%C3%ADnica-y-de-la-salud-antes-semillero-psicol-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-psicolog%C3%ADa-cl%C3%ADnica-y-de-la-salud-antes-semillero-psicol-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Psicología Organizacional y del Trabajo",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-psicolog%C3%ADa-organizacional-y-del-trabajo-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-psicolog%C3%ADa-organizacional-y-del-trabajo-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Relaciones entre Derecho Internacional y Derecho Interno",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-relaciones-entre-derecho-internacional-y-derecho-intern-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-relaciones-entre-derecho-internacional-y-derecho-intern-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Relaciones Familiares y Conflictos",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-relaciones-familiares-y-conflictos-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-relaciones-familiares-y-conflictos-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Responsabilidad Civil y del Estado",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-responsabilidad-civil-y-del-estado-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-responsabilidad-civil-y-del-estado-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero Robótica Aplicada",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-rob%C3%B3tica-aplicada",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-rob%C3%B3tica-aplicada",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Salud mental y psiquiatria",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-salud-mental-y-psiquiatria-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-salud-mental-y-psiquiatria-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Salud Sexual y Procreativa",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-salud-sexual-y-procreativa-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-salud-sexual-y-procreativa-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Señales biológicas aplicadas a la Fisiología",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-se%C3%B1ales-biol%C3%B3gicas-aplicadas-a-la-fisiolog%C3%ADa-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-se%C3%B1ales-biol%C3%B3gicas-aplicadas-a-la-fisiolog%C3%ADa-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Servicio y Hospitalidad",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-servicio-y-hospitalidad-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-servicio-y-hospitalidad-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Teoría y calidad del cuidado de enfermería",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-teor%C3%ADa-y-calidad-del-cuidado-de-enfermer%C3%ADa-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-teor%C3%ADa-y-calidad-del-cuidado-de-enfermer%C3%ADa-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Terapia Celular y Metabolismo",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-terapia-celular-y-metabolismo-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-terapia-celular-y-metabolismo-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Translational Neuroscience Research Lab",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-translational-neuroscience-research-lab-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-translational-neuroscience-research-lab-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Translational Science in Infectious Diseases and Critical Care Medicine (TS ID/CCM)",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-translational-science-in-infectious-diseases-and-critic-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-translational-science-in-infectious-diseases-and-critic-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Trauma y Rehabilitación",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-trauma-y-rehabilitaci%C3%B3n-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-trauma-y-rehabilitaci%C3%B3n-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    },
+    {
+      "name": "Semillero - Trocknen",
+      "profile_url": "https://pure.unisabana.edu.co/es/organisations/semillero-trocknen-2",
+      "type": "Unidad organizativa:",
+      "unit_id": "semillero-trocknen-2",
+      "statistics": {
+        "researchers_count": 0,
+        "total_publications": 0
+      }
+    }
+  ],
+  "researchers": [],
+  "scientific_production": [],
+  "relationships": {
+    "researcher_unit_mapping": {},
+    "unit_statistics": {},
+    "research_areas": {}
+  }
+}
