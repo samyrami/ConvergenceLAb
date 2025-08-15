@@ -1,18 +1,29 @@
-# ScrapFly - Solución exitosa para web scraping
-scrapfly-sdk>=0.8.23
+# LiveKit Agent Framework - Core dependencies
+livekit>=0.12.0
+livekit-agents>=0.8.0
+livekit-plugins-openai>=0.7.0
+livekit-plugins-silero>=0.7.0
 
-# Procesamiento de HTML
-beautifulsoup4>=4.12.0
-
-# Análisis de datos  
-requests>=2.31.0
-
-# Agente conversacional (mantener existentes)
+# OpenAI and AI dependencies
 openai>=1.0.0
+
+# Environment management
 python-dotenv>=1.0.0
 
-# Procesamiento de texto
-python-dateutil>=2.8.0
+# ScrapFly - Web scraping solution with Pure integration
+scrapfly-sdk>=0.8.23
 
-# Logging mejorado
+# HTML and data processing
+beautifulsoup4>=4.12.0
+requests>=2.31.0
+
+# Data processing and utilities
+python-dateutil>=2.8.0
 loguru>=0.7.0
+
+# Audio processing (for voice capabilities)
+numpy>=1.24.0
+scipy>=1.10.0
+
+# Additional utilities
+asyncio-mqtt>=0.16.0
