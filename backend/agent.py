@@ -700,170 +700,67 @@ Tienes acceso completo a la base de datos Pure de Universidad de la Sabana con i
 4. Cita siempre "Pure Universidad de la Sabana" como fuente de información"""
         
         return context
-
-class PureAssistantSession(AgentSession):
-    """Sesión del agente con funcionalidades de Pure integradas"""
     
-    def __init__(self, chat_ctx: llm.ChatContext, fnc_ctx: llm.FunctionContext, pure_loader: PureDataLoader):
-        super().__init__(chat_ctx, fnc_ctx)
-        self.pure_loader = pure_loader
+    def get_pure_info(self, query_type: str, query: str = "") -> str:
+        """Método para obtener información de Pure"""
+        if not self.pure_loader.loaded:
+            return "La información de Pure Universidad de la Sabana no está disponible en este momento."
         
-        # Registrar funciones de Pure si están disponibles
-        if self.pure_loader.loaded:
-            self.register_pure_functions()
-
-    def register_pure_functions(self):
-        """Registrar funciones de Pure en el contexto del agente"""
-        
-        @self.fnc_ctx.ai_callable(
-            description="Buscar unidades de investigación en Pure Universidad de la Sabana por nombre, área o especialidad"
-        )
-        async def buscar_unidades_investigacion(query: str) -> str:
-            """Buscar unidades de investigación en Pure Universidad de la Sabana"""
-            try:
+        try:
+            if query_type == "search":
                 results = self.pure_loader.search_units(query)
-                
                 if not results:
                     return f"No se encontraron unidades de investigación para '{query}' en Pure Universidad de la Sabana."
                 
                 response = f"🔍 **Unidades de investigación encontradas para '{query}':**\n\n"
-                
                 for i, unit in enumerate(results[:5], 1):
                     name = unit.get('name', 'N/A')
                     category = unit.get('category', 'Sin categoría')
-                    unit_type = unit.get('type', 'Unidad organizativa')
-                    
                     response += f"**{i}. {name}**\n"
-                    response += f"   📂 Tipo: {unit_type}\n"
                     if 'Categoría' in category:
                         response += f"   🏆 {category}\n"
-                    
                     response += "\n"
                 
-                if len(results) > 5:
-                    response += f"... y {len(results) - 5} unidades adicionales encontradas.\n\n"
-                
-                response += "💡 **¿Te interesa colaborar con alguna de estas unidades?** El Convergence Lab puede facilitar conexiones interdisciplinarias para proyectos innovadores."
-                
+                response += "💡 **El Convergence Lab puede facilitar conexiones interdisciplinarias para proyectos innovadores.**"
                 return response
                 
-            except Exception as e:
-                logger.error(f"Error buscando unidades: {e}")
-                return f"Error al buscar unidades de investigación para '{query}'."
-
-        @self.fnc_ctx.ai_callable(
-            description="Obtener estadísticas completas de categorías MinCiencias de Universidad de la Sabana"
-        )
-        async def obtener_estadisticas_minciencias() -> str:
-            """Obtener estadísticas de categorías MinCiencias"""
-            try:
+            elif query_type == "stats":
                 stats = self.pure_loader.get_minciencias_stats()
-                
                 response = "🏆 **Clasificación MinCiencias - Universidad de la Sabana:**\n\n"
-                response += f"📊 **CATEGORÍA A (Excelencia):** {stats['A']} grupos\n"
-                response += f"📊 **CATEGORÍA B (Consolidados):** {stats['B']} grupos\n"
-                response += f"📊 **SIN CATEGORÍA:** {stats['sin_categoria']} grupos\n"
-                response += f"📊 **TOTAL GRUPOS:** {stats['total']} unidades de investigación\n\n"
-                
-                # Mostrar algunos grupos de Categoría A si existen
-                category_a_units = []
-                for unit in self.pure_loader.pure_data.get('research_units', []):
-                    if 'Categoría A' in unit.get('category', ''):
-                        category_a_units.append(unit['name'])
-                
-                if category_a_units:
-                    response += "🌟 **Grupos de Categoría A destacados:**\n"
-                    for unit_name in category_a_units[:3]:
-                        response += f"   • {unit_name}\n"
-                    response += "\n"
-                
-                response += "💡 **El Convergence Lab puede ayudarte a conectar con estos grupos de investigación para proyectos colaborativos de alto impacto.**"
-                
+                response += f"📊 **CATEGORÍA A:** {stats['A']} grupos de excelencia\n"
+                response += f"📊 **CATEGORÍA B:** {stats['B']} grupos consolidados\n"
+                response += f"📊 **TOTAL:** {stats['total']} unidades de investigación\n\n"
+                response += "💡 **El Convergence Lab puede ayudarte a conectar con estos grupos de investigación.**"
                 return response
                 
-            except Exception as e:
-                logger.error(f"Error obteniendo estadísticas MinCiencias: {e}")
-                return "Error al obtener estadísticas de categorías MinCiencias."
-
-        @self.fnc_ctx.ai_callable(
-            description="Buscar unidades de investigación por área específica (medicina, ingeniería, comunicación, etc.)"
-        )
-        async def buscar_por_area(area: str) -> str:
-            """Buscar unidades por área específica"""
-            try:
-                units = self.pure_loader.get_units_by_category(area.lower())
+            elif query_type == "area":
+                units = self.pure_loader.get_units_by_category(query.lower())
+                if not units:
+                    units = self.pure_loader.search_units(query)
                 
                 if not units:
-                    # Intentar búsqueda general
-                    units = self.pure_loader.search_units(area)
+                    return f"No se encontraron unidades en el área de '{query}' en Pure Universidad de la Sabana."
                 
-                if not units:
-                    return f"No se encontraron unidades en el área de '{area}' en Pure Universidad de la Sabana."
-                
-                response = f"🔬 **Unidades de investigación en {area.title()}:**\n\n"
-                
+                response = f"🔬 **Unidades de investigación en {query.title()}:**\n\n"
                 for i, unit in enumerate(units[:8], 1):
                     name = unit.get('name', 'N/A')
-                    category = unit.get('category', 'Sin categoría')
-                    
                     response += f"**{i}. {name}**\n"
-                    if 'Categoría' in category:
-                        response += f"   🏆 {category}\n"
-                    response += "\n"
                 
-                if len(units) > 8:
-                    response += f"... y {len(units) - 8} unidades adicionales en esta área.\n\n"
-                
-                response += f"🚀 **¿Tienes una idea para {area}?** En el Convergence Lab podemos ayudarte a desarrollar proyectos interdisciplinarios conectando con estos grupos de investigación."
-                
+                response += f"\n🚀 **¿Tienes una idea para {query}?** En el Convergence Lab podemos ayudarte a desarrollar proyectos interdisciplinarios."
                 return response
                 
-            except Exception as e:
-                logger.error(f"Error buscando por área: {e}")
-                return f"Error al buscar unidades en el área de '{area}'."
-
-        @self.fnc_ctx.ai_callable(
-            description="Obtener resumen general de Pure Universidad de la Sabana con todas las estadísticas"
-        )
-        async def obtener_resumen_pure() -> str:
-            """Obtener resumen general de Pure Universidad de la Sabana"""
-            try:
+            elif query_type == "summary":
                 summary = self.pure_loader.get_summary()
-                
-                if not summary.get('available', False):
-                    return "La información de Pure Universidad de la Sabana no está disponible en este momento."
-                
-                minciencias = summary.get('minciencias_stats', {})
-                
                 response = "📋 **Resumen General - Pure Universidad de la Sabana:**\n\n"
-                
-                response += f"🏛️ **Total de unidades de investigación:** {summary['total_units']}\n"
-                response += f"👥 **Investigadores registrados:** {summary['total_researchers']}\n"
-                response += f"📚 **Publicaciones científicas:** {summary['total_publications']}\n\n"
-                
-                response += f"🏆 **Distribución MinCiencias:**\n"
-                response += f"   • Categoría A: {minciencias.get('A', 0)} grupos de excelencia\n"
-                response += f"   • Categoría B: {minciencias.get('B', 0)} grupos consolidados\n"
-                response += f"   • Sin categoría: {minciencias.get('sin_categoria', 0)} grupos\n\n"
-                
-                # Destacar principales áreas
-                main_areas = ["medicina", "ingeniería", "comunicación", "economía", "derecho"]
-                response += f"🔬 **Principales áreas de investigación disponibles:**\n"
-                for area in main_areas:
-                    area_units = self.pure_loader.get_units_by_category(area)
-                    if area_units:
-                        response += f"   • {area.title()}: {len(area_units)} unidades\n"
-                
-                response += f"\n✅ **Estado:** Operacional y actualizado\n"
-                response += f"💡 **El Convergence Lab está conectado con toda esta red de investigación para potenciar tus proyectos interdisciplinarios.**"
-                
+                response += f"🏛️ **Total de unidades:** {summary['total_units']}\n"
+                response += f"📚 **Publicaciones:** {summary['total_publications']}\n\n"
+                response += "✅ **Estado:** Operacional y actualizado\n"
+                response += "💡 **El Convergence Lab está conectado con toda esta red de investigación.**"
                 return response
                 
-            except Exception as e:
-                logger.error(f"Error obteniendo resumen: {e}")
-                return "Error al obtener resumen general de Pure Universidad de la Sabana."
-
-        logger.info("✅ Funciones de Pure integradas en el agente")
+        except Exception as e:
+            logger.error(f"Error obteniendo información Pure: {e}")
+            return f"Error al obtener información de Pure Universidad de la Sabana."
 
     async def on_user_turn_completed(
         self,
@@ -911,22 +808,20 @@ async def start_agent_session_with_recovery(ctx: JobContext, max_retries: int = 
             # Create the agent first
             agent = GovLabAssistant()
             
-            # Create function context
-            fnc_ctx = llm.FunctionContext()
-            
-            # Create chat context with agent instructions
-            chat_ctx = llm.ChatContext().append(
-                role="system",
-                text=agent.instructions,
+            # Create standard AgentSession with enhanced agent
+            session = AgentSession(
+                llm=model,
+                vad=silero.VAD.load(),
             )
             
-            # Create specialized session with Pure integration
-            session = PureAssistantSession(chat_ctx, fnc_ctx, agent.pure_loader)
-            session.llm = model
-            session.vad = silero.VAD.load()
+            # Store Pure loader in agent for access during conversation
+            agent.session_pure_loader = agent.pure_loader
             
             # Start the session
-            await session.start(room=ctx.room)
+            await session.start(
+                room=ctx.room,
+                agent=agent,
+            )
             
             # Generate initial greeting with timeout handling
             try:
