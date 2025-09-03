@@ -20,6 +20,9 @@ from livekit.agents import (
 from livekit.agents._exceptions import APIConnectionError
 from livekit.plugins import openai, silero
 
+# Importar configuración de timeouts
+from agent_timeout_config import get_agent_timeout_config
+
 # Load environment variables from .env.local
 load_dotenv(dotenv_path=".env.local")
 
@@ -775,12 +778,15 @@ Tienes acceso completo a la base de datos Pure de Universidad de la Sabana con i
 
 async def create_realtime_model_with_retry(max_retries: int = 3) -> openai.realtime.RealtimeModel:
     """Create a realtime model with connection retry logic."""
+    timeout_config = get_agent_timeout_config()
+    
     for attempt in range(max_retries):
         try:
+            model_config = timeout_config.get_openai_model_config()
             model = openai.realtime.RealtimeModel(
                 voice="ash",
                 model="gpt-4o-realtime-preview",
-                temperature=0.6,
+                temperature=0.6
             )
             logger.info(f"Realtime model created successfully on attempt {attempt + 1}")
             return model
@@ -809,9 +815,14 @@ async def start_agent_session_with_recovery(ctx: JobContext, max_retries: int = 
             agent = GovLabAssistant()
             
             # Create standard AgentSession with enhanced agent
+            # Configurar VAD para respuesta inmediata sin esperar confirmación
+            vad = silero.VAD.load()
+            vad.min_silence_duration = 0.05  # 50ms de silencio mínimo
+            vad.speech_threshold = 0.01      # Umbral ultra sensible
+            
             session = AgentSession(
                 llm=model,
-                vad=silero.VAD.load(),
+                vad=vad,
             )
             
             # Store Pure loader in agent for access during conversation
@@ -825,11 +836,12 @@ async def start_agent_session_with_recovery(ctx: JobContext, max_retries: int = 
             
             # Generate initial greeting with timeout handling
             try:
+                timeout_config = get_agent_timeout_config()
                 await asyncio.wait_for(
                     session.generate_reply(
                         instructions="Saluda brevemente al usuario e introduce el ConvergenceLab"
                     ),
-                    timeout=10.0  # 10 second timeout
+                    timeout=timeout_config.get_timeout_for_query_type("greeting")
                 )
                 logger.info("Initial greeting generated successfully")
             except asyncio.TimeoutError:
