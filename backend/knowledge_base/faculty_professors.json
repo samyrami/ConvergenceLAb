@@ -87,22 +87,22 @@
       "grupo_url": "https://scienti.minciencias.gov.co/gruplac/jsp/visualiza/visualizagr.jsp?nro=00000000000461"
     },
     {
-      "nombre": "1. Doctorado",
-      "titulo": "Título obtenido    España Título obtenido    España Name: 11, dtype: object",
-      "pais": "Fisioterapeuta",
-      "pregrado": "Asociado",
-      "categoria_institucional": "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001385934",
-      "categoria_minciencias": "Facultad de Enfermería y Rehabilitación / Departamento de Movimiento Corporal Humano",
-      "grupo_url": "2.Asociado"
+      "nombre": "ALFONSO MORA MARGARETH LORENA",
+      "titulo": "Doctorado",
+      "pais": "España",
+      "pregrado": "Fisioterapeuta",
+      "categoria_institucional": "Facultad de Enfermería y Rehabilitación / Departamento de Movimiento Corporal Humano",
+      "categoria_minciencias": "",
+      "grupo_url": ""
     },
     {
-      "nombre": "1. Doctorado",
-      "titulo": "Título obtenido    Colombia Título obtenido    Colombia Name: 15, dtype: object",
+      "nombre": "VILLAMIL PARRA WILDER ANDRES",
+      "titulo": "Doctorado",
       "pais": "Fisioterapeuta",
       "pregrado": "Asistente",
-      "categoria_institucional": "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?c od_rh=0001646475",
-      "categoria_minciencias": "Facultad de Enfermería y Rehabilitación / Departamento de Movimiento Corporal Humano",
-      "grupo_url": "2. Asociado"
+      "categoria_institucional": "Facultad de Enfermería y Rehabilitación / Departamento de Movimiento Corporal Humano",
+      "categoria_minciencias": "",
+      "grupo_url": ""
     }
   ]
 }
