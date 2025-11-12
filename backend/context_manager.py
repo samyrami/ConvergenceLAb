@@ -82,7 +82,8 @@ class ContextManager:
                 self.contexts['research_publications'] = {
                     'title': 'Publicaciones e Investigación',
                     'keywords': ['publicación', 'research', 'investigación', 'artículo', 'estudio', 'investigador', 'revista', 'paper', 'tesis', 'grupo', 'unidad', 'producto', 'producción', 'científico', 'cientifico', 'journal', 'publicado', 'publicada'],
-                    'content': self._format_research_data(research_data)
+                    'content': self._format_research_data(research_data),
+                    '_raw_data': research_data  # Guardar datos originales para búsqueda
                 }
                 # Indexar keywords de research
                 for keyword in self.contexts['research_publications']['keywords']:
@@ -111,23 +112,31 @@ class ContextManager:
                 for prof in professors[:30]:  # Mostrar primeros 30
                     if isinstance(prof, dict):
                         nombre = prof.get('nombre', 'Sin nombre')
-                        titulo = prof.get('titulo', '')
-                        categoria = prof.get('categoria_institucional', 'N/A')
-                        pais = prof.get('pais', 'N/A')
-                        pregrado = prof.get('pregrado', 'N/A')
-                        lines.append(f"- {nombre} | Categoría: {categoria} | País: {pais} | Pregrado: {pregrado}")
+                        titulo = prof.get('titulo', 'N/A')
+                        escalafon = prof.get('escalafon_puesto', 'N/A')
+                        categoria_minciencias = prof.get('categoria_minciencias', '')
+                        lines.append(f"- {nombre}")
+                        lines.append(f"  Título: {titulo}")
+                        lines.append(f"  Escalafón: {escalafon}")
+                        if categoria_minciencias:
+                            lines.append(f"  MinCiencias: {categoria_minciencias}")
+                        lines.append("")
         elif isinstance(faculty_data, list):
             lines.append(f"Total de profesores registrados: {len(faculty_data)}\n")
             for prof in faculty_data[:30]:
                 if isinstance(prof, dict):
                     nombre = prof.get('nombre', prof.get('name', 'Sin nombre'))
-                    categoria = prof.get('categoria_institucional', prof.get('department', 'N/A'))
-                    lines.append(f"- {nombre} (Categoría: {categoria})")
+                    titulo = prof.get('titulo', 'N/A')
+                    escalafon = prof.get('escalafon_puesto', prof.get('categoria_institucional', 'N/A'))
+                    lines.append(f"- {nombre}")
+                    lines.append(f"  Título: {titulo}")
+                    lines.append(f"  Escalafón: {escalafon}")
+                    lines.append("")
         
         return "\n".join(lines) if lines else "No hay datos de profesores disponibles."
     
     def _format_research_data(self, research_data: Dict[str, Any]) -> str:
-        """Formatea los datos de investigación para incluirlos como contexto"""
+        """Formatea los datos de investigación para incluirlos como contexto con búsqueda mejorada"""
         lines = []
         
         # Extraer metadata
@@ -139,39 +148,100 @@ class ContextManager:
             description = metadata.get('description', 'Productos de investigación')
             
             lines.append(f"📰 {description}")
-            lines.append(f"Total de publicaciones: {total_pubs} | Unidades: {units} | Grupos: {groups}\n")
+            lines.append(f"Total: {total_pubs} publicaciones | {units} unidades | {groups} grupos de investigación\n")
+            
+            # Crear índice de publicaciones para búsqueda rápida
+            lines.append("=== PUBLICACIONES POR GRUPO Y UNIDAD ===")
             
             # Extraer publicaciones por unidad
             by_unit = research_data.get('by_unit', {})
             if isinstance(by_unit, dict):
-                pub_count = 0
-                for unit_name, publications in list(by_unit.items())[:5]:  # Mostrar hasta 5 unidades
-                    lines.append(f"\n🏢 Unidad: {unit_name}")
+                for unit_name, publications in list(by_unit.items())[:10]:  # Mostrar hasta 10 unidades
                     if isinstance(publications, list):
-                        for pub in publications[:8]:  # 8 publicaciones por unidad
+                        # Agrupar por grupo de investigación
+                        groups_dict = {}
+                        for pub in publications:
                             if isinstance(pub, dict):
+                                grupo = pub.get('grupo', 'Sin grupo')
+                                if grupo not in groups_dict:
+                                    groups_dict[grupo] = []
+                                groups_dict[grupo].append(pub)
+                        
+                        lines.append(f"\n🏢 UNIDAD: {unit_name}")
+                        
+                        for grupo_name, grupo_pubs in groups_dict.items():
+                            lines.append(f"  📊 Grupo: {grupo_name}")
+                            # Mostrar primeras 5 publicaciones del grupo
+                            for pub in grupo_pubs[:5]:
                                 titulo = pub.get('titulo', 'Sin título')
                                 revista = pub.get('revista', 'N/A')
-                                grupo = pub.get('grupo', 'N/A')
-                                lines.append(f"  - {titulo} | Revista: {revista} | Grupo: {grupo}")
-                                pub_count += 1
-                                if pub_count >= 30:  # Límite total de publicaciones
-                                    break
-                        if pub_count >= 30:
-                            break
+                                lines.append(f"    ✓ {titulo}")
+                                lines.append(f"      Revista: {revista}")
         elif isinstance(research_data, list):
             lines.append(f"Total de publicaciones: {len(research_data)}\n")
             for pub in research_data[:30]:
                 if isinstance(pub, dict):
                     titulo = pub.get('titulo', pub.get('title', 'Sin título'))
                     revista = pub.get('revista', pub.get('journal', 'N/A'))
-                    lines.append(f"- {titulo} (Revista: {revista})")
+                    grupo = pub.get('grupo', 'N/A')
+                    lines.append(f"- {titulo}")
+                    lines.append(f"  Revista: {revista} | Grupo: {grupo}")
         
         return "\n".join(lines) if lines else "No hay datos de publicaciones disponibles."
+    
+    def search_publications(self, query: str) -> str:
+        """Busca publicaciones por título, tema o grupo de investigación"""
+        if 'research_publications' not in self.contexts:
+            return "No hay datos de publicaciones disponibles."
+        
+        research_data = self.contexts['research_publications'].get('_raw_data', {})
+        if not research_data:
+            return "No se puede buscar en publicaciones."
+        
+        query_lower = query.lower()
+        results = []
+        
+        by_unit = research_data.get('by_unit', {})
+        if isinstance(by_unit, dict):
+            for unit_name, publications in by_unit.items():
+                if isinstance(publications, list):
+                    for pub in publications:
+                        if isinstance(pub, dict):
+                            titulo = pub.get('titulo', '').lower()
+                            grupo = pub.get('grupo', '').lower()
+                            revista = pub.get('revista', '').lower()
+                            unidad = pub.get('unidad', '').lower()
+                            
+                            # Buscar en título, grupo, revista
+                            if (query_lower in titulo or 
+                                query_lower in grupo or 
+                                query_lower in revista or
+                                query_lower in unidad):
+                                results.append(pub)
+        
+        if not results:
+            return f"No se encontraron publicaciones relacionadas con '{query}'."
+        
+        # Formatear resultados
+        lines = [f"🔍 Resultados para '{query}' ({len(results)} encontrados):\n"]
+        for pub in results[:10]:  # Mostrar máximo 10
+            unidad = pub.get('unidad', 'N/A')
+            grupo = pub.get('grupo', 'N/A')
+            titulo = pub.get('titulo', 'Sin título')
+            revista = pub.get('revista', 'N/A')
+            
+            lines.append(f"📄 {titulo}")
+            lines.append(f"   Unidad: {unidad}")
+            lines.append(f"   Grupo: {grupo}")
+            lines.append(f"   Revista: {revista}")
+            lines.append("")
+        
+        return "\n".join(lines)
     
     def get_relevant_context(self, query: str, max_sections: int = 3) -> str:
         """
         Identifica y retorna solo el contexto relevante para la consulta
+        Busca inteligentemente en publicaciones, artículos, grupos, etc.
         
         Args:
             query: Consulta del usuario
@@ -184,7 +254,18 @@ class ContextManager:
         relevant_contexts = []
         scores = {}
         
-        # Scoring por keywords
+        # Primero: Buscar si es una consulta sobre publicaciones/artículos
+        publication_keywords = ['publicación', 'artículo', 'revista', 'paper', 'estudio', 
+                               'investigación', 'grupo', 'grupo de investigación', 'tema']
+        is_publication_query = any(kw in query_lower for kw in publication_keywords)
+        
+        if is_publication_query and 'research_publications' in self.contexts:
+            # Si es una consulta sobre publicaciones, buscar en el contenido
+            search_result = self.search_publications(query)
+            if "No se encontraron" not in search_result:
+                return search_result
+        
+        # Segundo: Scoring por keywords normal
         for keyword, context_names in self.keywords_map.items():
             if keyword in query_lower:
                 for context_name in context_names:
