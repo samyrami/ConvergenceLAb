@@ -268,9 +268,9 @@ async def create_realtime_model_with_retry(max_retries: int = 3) -> openai.realt
             model = openai.realtime.RealtimeModel(
                 voice="ash",
                 model="gpt-4o-realtime-preview",
-                temperature=0.3  # ULTRA BAJO para NO alucinar (era 0.6)
+                temperature=0.4
             )
-            logger.info(f"Realtime model created successfully on attempt {attempt + 1} [temperature=0.3]")
+            logger.info(f"Realtime model created successfully on attempt {attempt + 1} [temperature=0.4]")
             return model
         except Exception as e:
             logger.warning(f"Failed to create realtime model on attempt {attempt + 1}: {e}")
