@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "generated": "2024-11-11",
+    "description": "Estadísticas de la base de conocimiento"
+  },
+  "professors": {
+    "total": 11,
+    "by_category": {}
+  },
+  "publications": {
+    "total": 1000,
+    "by_unit": {
+      "Inalde Business School": 81,
+      "Clínica Universidad de La Sabana": 90,
+      "Facultad de Filosofía y Ciencias Humanas": 40,
+      "Facultad de Educación": 272,
+      "Instituto Latinoamericano de La Familia": 96,
+      "Escuela Internacional de Ciencias Económicas y Administrativas": 367,
+      "Facultad de Medicina": 54
+    },
+    "by_group": {
+      "Grupo de Investigación en Empresa, competitividad y Marketing": 19,
+      "Grupo de Investigación en Empresas Familiares y Gobierno Corporativo": 34,
+      "Grupo de Investigación en Direccion de Personas en las Organizaciones": 28,
+      "Grupo de Investigación en Salud Sexual y Procreativa": 35,
+      "Grupo de Investigación en Trauma y Rehabilitación": 19,
+      "Grupo de Investigación en Psiquiatria y Salud Mental": 36,
+      "Novitas": 1,
+      "Grupo de Investigación en Valor y Palabra": 17,
+      "Grupo de Investigación en Racionalidad y Cultura": 22,
+      "LALETUS (Language Learning and Teaching - Universidad de La Sabana)": 44,
+      "Grupo de Investigación en Educacion y Educadores": 59,
+      "Grupo de Investigación en Tecnologias para la Academia - Proventus - Unisabana": 145,
+      "Grupo de Investigación en Sociopolítica, Cultura y Ambiente": 24,
+      "Grupo de Investigación en Familia y Sociedad": 96,
+      "Grupo de Investigación en Negocios, Economia y Finanzas": 100,
+      "Grupo de Investigación en Innovación y Estrategia": 96,
+      "Grupo de Investigación en Operations and Supply Chain Management Research Group": 121,
+      "Grupo de Investigación en Alimentación, Gestión de Procesos y Servicio": 50,
+      "Grupo de Investigación en Medicina del Adulto": 54
+    }
+  }
+}

@@ -1,0 +1,431 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2024-11-11",
+    "description": "Contexto institucional completo de Universidad de La Sabana para Convergence Lab Agent",
+    "source": "agent.py lines 348-631"
+  },
+  "universidad_sabana": {
+    "modelo_u3g": {
+      "nombre": "Universidad de Tercera Generación (U3G)",
+      "descripcion": "Integra docencia, investigación e impacto social real. Convierte resultados de investigación en efectos tangibles en la vida de los ciudadanos",
+      "diferenciador": "A diferencia de universidades de primera y segunda generación"
+    },
+    "doctorado_ia": {
+      "titulo": "Doctorado en Inteligencia Artificial",
+      "caracteristicas": [
+        "Primer doctorado en IA de Colombia",
+        "Parte del portafolio estratégico U3G",
+        "Aplica IA para soluciones reales en salud, educación, sostenibilidad y servicios públicos"
+      ],
+      "integracion": ["Unisabana HUB", "GovLab", "UCTS"]
+    },
+    "cifras_2024": {
+      "estudiantes": {
+        "total": 12180,
+        "pregrado": 8780,
+        "posgrado": 3400
+      },
+      "graduados": 72835,
+      "profesores": {
+        "total": 1953,
+        "planta_profesional": 207,
+        "planta_docencia": 169,
+        "hora_catedra": 271
+      },
+      "administrativos": 1262,
+      "colaboradores_clinica": 903
+    },
+    "equipo_directivo": {
+      "genero": {
+        "mujeres": "55%",
+        "hombres": "45%"
+      },
+      "trabajo_remoto": {
+        "teletrabajo": 379,
+        "home_office": 463
+      },
+      "generaciones": {
+        "milenials": "56.1%",
+        "gen_x": "37.2%",
+        "gen_z": "15.3%",
+        "baby_boomers": "6.2%",
+        "gen_silenciosa": "0.2%"
+      }
+    },
+    "profesores_ia": [
+      {
+        "nombre": "Dr. Felix Mohr",
+        "grupo": "CAPSAB",
+        "temas": ["Machine Learning", "Meta-Learning", "AutoML"],
+        "publicaciones_destacadas": [
+          "Learning curves for decision making",
+          "Naive automated machine learning",
+          "Learning curve cross-validation (IEEE TPAMI)"
+        ]
+      },
+      {
+        "nombre": "Dra. Claudia Lorena Garzón Castro",
+        "grupo": "CAPSAB",
+        "temas": ["Visión artificial", "robot NAO", "señales humanas"],
+        "proyectos": [
+          "Lengua de señas con NAO",
+          "Microalgas y control adaptativo"
+        ]
+      },
+      {
+        "nombre": "Dr. David Felipe Celeita Rodríguez",
+        "grupo": "CAPSAB",
+        "temas": ["IoT", "IA agrícola"],
+        "proyecto": "Riego inteligente con ML"
+      },
+      {
+        "nombre": "Dra. Lorena Silvana Reyes Rubiano",
+        "grupo": "Operations & SCM",
+        "temas": ["Ruteo", "ciudades inteligentes"]
+      },
+      {
+        "nombre": "Dr. Andrés Felipe Muñoz Villamizar",
+        "grupo": "Operations & SCM",
+        "temas": ["Logística sostenible"],
+        "publicacion": "IJPPM 2024"
+      },
+      {
+        "nombre": "Dr. William J. Guerrero",
+        "grupos": ["CAPSAB", "Sistemas Logísticos"],
+        "temas": ["Physical Internet", "algoritmos de ruteo"],
+        "premio": "Global Supply Chain Award 2024"
+      }
+    ],
+    "grupos_investigacion_ia": [
+      {
+        "nombre": "CAPSAB",
+        "facultad": "Ingeniería",
+        "temas": ["IA aplicada", "visión", "robótica", "energía"],
+        "semillero": "INFOSEED",
+        "enlace": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigación-en-capsab"
+      },
+      {
+        "nombre": "Operations and Supply Chain Management",
+        "facultad": "Escuela Internacional de Ciencias Económicas y Administrativas",
+        "temas": ["Logística", "transporte", "simulación", "ML"],
+        "semillero": "Logística Empresarial",
+        "enlace": "https://pure.unisabana.edu.co/es/organisations/grupo-de-investigación-en-operations"
+      }
+    ],
+    "portafolio_academico": {
+      "total_programas": 181,
+      "nuevos_programas": {
+        "total": 20,
+        "virtuales": 9,
+        "hibridos": 10,
+        "presenciales": 1
+      },
+      "doctorados_nuevos": [
+        "Ciencias Clínicas",
+        "Inteligencia Artificial"
+      ],
+      "maestrias_nuevas": 12,
+      "maestrias_destacadas": [
+        "Analítica Aplicada",
+        "Software",
+        "Teología",
+        "Comunicación Política"
+      ],
+      "pregrados_recientes": [
+        "Ciencia de Datos",
+        "Ingeniería de Diseño e Innovación"
+      ],
+      "programas_lifelong": 570,
+      "programas_tecnicos": 5,
+      "aprendizaje_experiencial": "76%",
+      "challenge_based_learning": "33%",
+      "casos_challenge_experience": 98,
+      "aprendizaje_colaborativo_internacional": 46,
+      "sala_jalinga": "producción de contenido audiovisual"
+    },
+    "investigacion_innovacion": {
+      "focos": [
+        "Vida humana plena",
+        "Bioeconomía y sostenibilidad",
+        "Cultura de paz y familia",
+        "Sociedad digital y competitividad"
+      ],
+      "publicaciones_scopus": 487,
+      "calidad_scopus": {
+        "q1_q2": "71%",
+        "coautoria_internacional": "48%"
+      },
+      "patentes": {
+        "total": 30,
+        "internacionales": 7,
+        "solicitudes": 75
+      },
+      "proyecto_destacado": "Mujeres líderes en invenciones",
+      "convocatoria": "Primera convocatoria Sabana Centro 360"
+    },
+    "centros_estrategicos": {
+      "ucts": {
+        "nombre": "Unisabana Center for Translational Science",
+        "descripcion": "Soluciones aplicadas para salud y bienestar",
+        "colaboracion": "Oxford",
+        "impacto": "Incide en políticas públicas y sistemas de salud"
+      },
+      "unisabana_hub": {
+        "proyectos": 127,
+        "personas_impactadas": 17462,
+        "licitaciones_publicas": 19,
+        "convocatoria_sgr": "convocatoria 35"
+      },
+      "govlab": {
+        "nombre": "Laboratorio de Gobierno",
+        "proyectos": [
+          {
+            "nombre": "IA para PQRS",
+            "cliente": "CAR Cundinamarca"
+          },
+          {
+            "nombre": "Lectura inteligente de planes de desarrollo"
+          },
+          {
+            "nombre": "Optimización de Transmilenio",
+            "ubicacion": "Estación Calle 100"
+          }
+        ],
+        "tableros_analitica": 17
+      }
+    },
+    "reconocimientos": [
+      {
+        "titulo": "Acreditación Alta Calidad por 10 años",
+        "nota": "solo 8 universidades en Colombia"
+      },
+      {
+        "titulo": "4ª universidad privada del país",
+        "fuente": "Ranking QS"
+      },
+      {
+        "titulo": "Top 5 nacional en Saber Pro"
+      },
+      {
+        "titulo": "Top 4 en reputación institucional",
+        "fuente": "Merco"
+      },
+      {
+        "titulo": "4.815 menciones en medios masivos",
+        "fuente": "Dircom Tracker"
+      }
+    ],
+    "rector": {
+      "nombre": "Rolando Andrés Roncancio Rachid",
+      "formacion": [
+        "Abogado (Unisabana)",
+        "MBA (INALDE)",
+        "Doctor en Gobierno (Navarra)"
+      ],
+      "reconocimientos": [
+        "Premio extraordinario a la mejor tesis doctoral",
+        "Reelecto en Junta Directiva de ASCUN"
+      ]
+    },
+    "sostenibilidad": [
+      {
+        "logro": "100% compensación huella de carbono 2023",
+        "cantidad": "1.548 toneladas CO₂"
+      },
+      {
+        "logro": "Primera universidad certificada 'Árbol' de Basura Cero Global"
+      },
+      {
+        "logro": "2° lugar nacional en infraestructura sostenible",
+        "fuente": "UI Green Metric"
+      }
+    ],
+    "organizacion_innovadora": {
+      "retos_rector": {
+        "participantes": 348,
+        "equipos": 96
+      },
+      "proyectos": {
+        "total": 18,
+        "horizontes": {
+          "h1": ["Cuarta Acreditación", "Excelencia en la Entrega", "Grecia"],
+          "h2": ["Regionalización", "Campus Virtual", "Centurión"],
+          "h3": ["Unisabana TEC", "Symphony", "Escuela de Gobierno", "GovLab", "Create", "UCTS"]
+        }
+      }
+    },
+    "escuela_gobierno": {
+      "nombre": "Escuela de Gobierno y Ciudadanía Inspiradora",
+      "programas": [
+        {
+          "nombre": "Maestría en Administración Pública (MPA)",
+          "estado": "registro calificado"
+        },
+        {
+          "nombre": "Executive Education",
+          "target": "entidades públicas"
+        }
+      ],
+      "infraestructura": "Inicio de obra del piso 0 del edificio Ad Portas",
+      "proyecto_destacado": {
+        "nombre": "Sabana Centro Cómo Vamos",
+        "descripcion": "Encuesta de percepción con 300 indicadores"
+      }
+    }
+  },
+  "centro_emprendimiento": {
+    "nombre": "Centro de Emprendimiento e Innovación Sabana",
+    "fundacion": 2016,
+    "rol": "incubadora de emprendedores",
+    "objetivo": "Impulsar el desarrollo social y económico regional",
+    "pilares": [
+      "Fortalecimiento del tejido empresarial",
+      "Dinamización de la comunidad emprendedora",
+      "Aseguramiento del éxito de proyectos innovadores"
+    ],
+    "modelo_4_fases": [
+      {
+        "fase": "Sensibilizar",
+        "descripcion": "Experiencias de inspiración y networking",
+        "impacto": "28.202 emprendedores sensibilizados"
+      },
+      {
+        "fase": "Entrenar",
+        "descripcion": "Entrenamiento práctico en habilidades, emprendimiento, innovación y ecosistema",
+        "impacto": "11.632 emprendedores entrenados"
+      },
+      {
+        "fase": "Acompañar",
+        "estrategias": [
+          "Red de mentores",
+          "Simulación de juntas directivas",
+          "Retos de aula"
+        ],
+        "impacto": "+1.100 emprendedores incubados"
+      },
+      {
+        "fase": "Potenciar",
+        "acciones": [
+          "Capital semilla",
+          "Conexiones con clientes",
+          "Networking estratégico"
+        ]
+      }
+    ],
+    "alianzas": {
+      "cantidad": "más de 30 aliados",
+      "destacadas": [
+        {
+          "nombre": "Connect Bogotá",
+          "descripcion": "18 universidades vinculadas"
+        },
+        {
+          "tipo": "Empresas privadas",
+          "empresas": [
+            "Grupo Energía Bogotá",
+            "Grupo Bolívar",
+            "Mercado Libre",
+            "Oracle"
+          ]
+        },
+        {
+          "nombre": "iNNpulsa Colombia",
+          "rol": "Universidad opera CEmprende Cundinamarca"
+        }
+      ]
+    },
+    "red_mentores": {
+      "nombre": "Bosque de Expertos",
+      "mentores_activos": 279,
+      "composicion": [
+        "profesores",
+        "administrativos",
+        "egresados",
+        "aliados del ecosistema"
+      ],
+      "tipo": "Apoyo voluntario a emprendedores"
+    },
+    "estrategias_incubacion": [
+      {
+        "nombre": "Club de emprendedores",
+        "liderado_por": "estudiantes",
+        "miembros": 246
+      },
+      {
+        "descripcion": "5 programas de acompañamiento según etapa del emprendimiento"
+      },
+      {
+        "tipo": "Programas con aliados",
+        "programas": [
+          "Mujeres emprendedoras Fontanar",
+          "Jóvenes emprendedores Fontanar",
+          "Programa de propiedad industrial"
+        ]
+      },
+      {
+        "tipo": "Innovaciones académicas",
+        "estrategias": [
+          "Retos de aula",
+          "Consultorios universitarios",
+          "Simulación de juntas directivas"
+        ]
+      }
+    ],
+    "casos_exito": [
+      {
+        "nombre": "Mateo Bolívar",
+        "carrera": "Negocios Internacionales",
+        "empresas": ["E-line", "Contler"],
+        "participacion": ["Shark Tank 2020", "Shark Tank 2023"],
+        "capital_levantado": "USD 470.000",
+        "beca": "Start Fellowship (Suiza)",
+        "premios": [
+          "Global Student Entrepreneur Award (2do mejor del mundo, 2022)",
+          "iNNpulsa Colombia (Mejor joven emprendedor 2022)"
+        ]
+      },
+      {
+        "nombre": "Simón Dueñas",
+        "carrera": "Administración de Empresas",
+        "empresa": "Bioparque Monarca",
+        "ingresos_anuales": "COP 1.000 millones",
+        "empleos_directos": 33,
+        "premios": [
+          "Finalista Premios Lazos (Embajada Británica, 2023)",
+          "Ganador Premios Ambientales (CAR, 2023)",
+          "Mejor proyecto social (Hult Prize on Campus, 2024)",
+          "2do lugar en GSEA 2024"
+        ]
+      },
+      {
+        "nombre": "Camila Cooper",
+        "carrera": "Comunicación Social y Periodismo",
+        "empresa": "Fruto Bendito",
+        "impacto": "9.800 familias en 41 ciudades",
+        "premios": [
+          "Young Leaders of the Americas Initiative (YLAI, 2021)",
+          "Latin American Leaders Award",
+          "Mujer de Éxito (2020)",
+          "WEF: Iconic Women Creating a Better World for All (2019)",
+          "Premio Impacto Sostenible (Ventures, 2018)",
+          "Momentum BBVA (2017)"
+        ]
+      },
+      {
+        "nombre": "Santiago Ortega",
+        "carrera": "Ingeniería Industrial",
+        "empresa": "Sketos",
+        "clientes": "+200",
+        "empleados": 53,
+        "beca": "YLAI 2022"
+      },
+      {
+        "nombre": "Daniel Tirado",
+        "carrera": "Administración de Mercadeo y Logística",
+        "empresa": "Tekton Soluciones",
+        "proyecto_destacado": "Instalación de cubierta Adportas de la Universidad"
+      }
+    ]
+  }
+}
