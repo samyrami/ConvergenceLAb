@@ -278,7 +278,6 @@ class DynamicPromptBuilder:
 
 ## INFORMACIÓN DISPONIBLE:
 """
-"""
     
     def build_prompt(self, query: str = "", include_pure: bool = True) -> str:
         """
