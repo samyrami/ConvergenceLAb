@@ -95,7 +95,7 @@ class ContextManager:
                 logger.error(f"Error cargando research_publications.json: {e}")
     
     def _format_faculty_data(self, faculty_data: Dict[str, Any]) -> str:
-        """Formatea los datos de faculty para incluirlos como contexto"""
+        """Formatea los datos de faculty para incluirlos como contexto con todos los campos disponibles"""
         lines = []
         
         # Extraer metadata si existe
@@ -103,7 +103,9 @@ class ContextManager:
             metadata = faculty_data.get('metadata', {})
             total = metadata.get('total', 0)
             description = metadata.get('description', 'Profesores de Universidad de La Sabana')
+            department = metadata.get('department', 'N/A')
             lines.append(f"📚 {description}")
+            lines.append(f"Departamento: {department}")
             lines.append(f"Total de profesores: {total}\n")
             
             # Extraer profesores del array
@@ -113,13 +115,48 @@ class ContextManager:
                     if isinstance(prof, dict):
                         nombre = prof.get('nombre', 'Sin nombre')
                         titulo = prof.get('titulo', 'N/A')
-                        escalafon = prof.get('escalafon_puesto', 'N/A')
+                        posicion = prof.get('posicion', prof.get('escalafon_puesto', 'N/A'))
                         categoria_minciencias = prof.get('categoria_minciencias', '')
+                        facultad = prof.get('facultad')
+                        tipo_dedicacion = prof.get('tipo_dedicacion')
+                        pais = prof.get('pais', '')
+                        pregrado = prof.get('pregrado', '')
+                        
                         lines.append(f"- {nombre}")
                         lines.append(f"  Título: {titulo}")
-                        lines.append(f"  Escalafón: {escalafon}")
+                        if posicion and posicion != 'N/A':
+                            lines.append(f"  Posición: {posicion}")
+                        if facultad:
+                            lines.append(f"  Facultad: {facultad}")
+                        if tipo_dedicacion:
+                            lines.append(f"  Dedicación: {tipo_dedicacion}")
                         if categoria_minciencias:
                             lines.append(f"  MinCiencias: {categoria_minciencias}")
+                        
+                        # Información de productividad académica si existe
+                        horas_investigacion = prof.get('horas_investigacion', 0)
+                        total_productos = prof.get('total_productos', 0)
+                        if horas_investigacion > 0 or total_productos > 0:
+                            lines.append(f"  📊 Investigación: {horas_investigacion}h | {total_productos} productos")
+                            
+                            # Detallar publicaciones si existen
+                            art_intl = prof.get('articulos_internacionales_indexados', 0)
+                            art_natl = prof.get('articulos_nacionales_indexados', 0)
+                            libros = prof.get('libros_capitulos_investigacion', 0)
+                            patentes = prof.get('patentes_disenos_software', 0)
+                            if art_intl > 0 or art_natl > 0 or libros > 0 or patentes > 0:
+                                details = []
+                                if art_intl > 0:
+                                    details.append(f"{art_intl} artículos internacionales")
+                                if art_natl > 0:
+                                    details.append(f"{art_natl} artículos nacionales")
+                                if libros > 0:
+                                    details.append(f"{libros} libros/capítulos")
+                                if patentes > 0:
+                                    details.append(f"{patentes} patentes/software")
+                                if details:
+                                    lines.append(f"    └ {' | '.join(details)}")
+                        
                         lines.append("")
         elif isinstance(faculty_data, list):
             lines.append(f"Total de profesores registrados: {len(faculty_data)}\n")
@@ -127,10 +164,11 @@ class ContextManager:
                 if isinstance(prof, dict):
                     nombre = prof.get('nombre', prof.get('name', 'Sin nombre'))
                     titulo = prof.get('titulo', 'N/A')
-                    escalafon = prof.get('escalafon_puesto', prof.get('categoria_institucional', 'N/A'))
+                    posicion = prof.get('posicion', prof.get('escalafon_puesto', prof.get('categoria_institucional', 'N/A')))
                     lines.append(f"- {nombre}")
                     lines.append(f"  Título: {titulo}")
-                    lines.append(f"  Escalafón: {escalafon}")
+                    if posicion and posicion != 'N/A':
+                        lines.append(f"  Posición: {posicion}")
                     lines.append("")
         
         return "\n".join(lines) if lines else "No hay datos de profesores disponibles."

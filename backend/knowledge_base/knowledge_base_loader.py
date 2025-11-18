@@ -115,7 +115,7 @@ Universidad de Tercera Generación que integra docencia, investigación e impact
     
     def search_professors(self, query: str, limit: int = 10) -> List[Dict[str, Any]]:
         """
-        Busca profesores por nombre, área o grupo
+        Busca profesores por nombre, área, grupo, facultad, o posición
         
         Args:
             query: Término de búsqueda
@@ -136,8 +136,23 @@ Universidad de Tercera Generación que integra docencia, investigación e impact
                 results.append(prof)
                 continue
             
+            # Buscar en facultad
+            if query_lower in prof.get('facultad', '').lower():
+                results.append(prof)
+                continue
+            
+            # Buscar en posición/escalafón
+            if query_lower in prof.get('posicion', '').lower() or query_lower in prof.get('escalafon_puesto', '').lower():
+                results.append(prof)
+                continue
+            
+            # Buscar en asignaturas
+            if query_lower in prof.get('asignaturas', '').lower():
+                results.append(prof)
+                continue
+            
             # Buscar en grupo
-            if 'grupo_url' in prof and query_lower in prof['grupo_url'].lower():
+            if 'grupo_investigacion_principal' in prof and query_lower in prof['grupo_investigacion_principal'].lower():
                 results.append(prof)
                 continue
         
@@ -221,14 +236,160 @@ Universidad de Tercera Generación que integra docencia, investigación e impact
         
         formatted = "\n### Profesores Relevantes:\n\n"
         for prof in professors:
-            formatted += f"- **{prof.get('nombre', 'N/A')}**\n"
-            if 'titulo' in prof:
-                formatted += f"  - Título: {prof['titulo']}\n"
-            if 'categoria_minciencias' in prof and prof['categoria_minciencias']:
-                formatted += f"  - Categoría MinCiencias: {prof['categoria_minciencias']}\n"
+            nombre = prof.get('nombre', 'N/A')
+            titulo = prof.get('titulo', 'N/A')
+            posicion = prof.get('posicion', prof.get('escalafon_puesto', 'N/A'))
+            facultad = prof.get('facultad', '')
+            categoria_minciencias = prof.get('categoria_minciencias', '')
+            total_productos = prof.get('total_productos', 0)
+            
+            formatted += f"- **{nombre}**\n"
+            formatted += f"  - Título: {titulo}\n"
+            formatted += f"  - Posición: {posicion}\n"
+            if facultad:
+                formatted += f"  - Facultad: {facultad}\n"
+            if categoria_minciencias:
+                formatted += f"  - Categoría MinCiencias: {categoria_minciencias}\n"
+            if total_productos > 0:
+                formatted += f"  - Productos de investigación: {total_productos}\n"
             formatted += "\n"
         
         return formatted
+    
+    def get_professors_by_position(self, position: str) -> List[Dict[str, Any]]:
+        """Obtiene profesores por posición/escalafón"""
+        professors = self.load_professors()
+        position_lower = position.lower()
+        results = []
+        
+        for prof in professors:
+            posicion = prof.get('posicion', prof.get('escalafon_puesto', '')).lower()
+            if position_lower in posicion:
+                results.append(prof)
+        
+        return results
+    
+    def get_professors_by_faculty(self, faculty: str) -> List[Dict[str, Any]]:
+        """Obtiene profesores de una facultad específica"""
+        professors = self.load_professors()
+        faculty_lower = faculty.lower()
+        results = []
+        
+        for prof in professors:
+            fac = prof.get('facultad', '').lower()
+            if faculty_lower in fac:
+                results.append(prof)
+        
+        return results
+    
+    def get_professors_by_minciencias_category(self, category: str) -> List[Dict[str, Any]]:
+        """Obtiene profesores por categoría MinCiencias"""
+        professors = self.load_professors()
+        category_lower = category.lower()
+        results = []
+        
+        for prof in professors:
+            cat = prof.get('categoria_minciencias', '').lower()
+            if category_lower in cat:
+                results.append(prof)
+        
+        return results
+    
+    def get_professors_with_publications(self, min_products: int = 1) -> List[Dict[str, Any]]:
+        """Obtiene profesores que tienen publicaciones/productos de investigación"""
+        professors = self.load_professors()
+        results = []
+        
+        for prof in professors:
+            total = prof.get('total_productos', 0)
+            if total >= min_products:
+                results.append(prof)
+        
+        return sorted(results, key=lambda x: x.get('total_productos', 0), reverse=True)
+    
+    def get_professors_by_dedication(self, dedication: str) -> List[Dict[str, Any]]:
+        """Obtiene profesores por tipo de dedicación (Tiempo completo, Medio tiempo, etc)"""
+        professors = self.load_professors()
+        dedication_lower = dedication.lower()
+        results = []
+        
+        for prof in professors:
+            ded = prof.get('tipo_dedicacion', '').lower()
+            if dedication_lower in ded:
+                results.append(prof)
+        
+        return results
+    
+    def get_professors_by_subject(self, subject: str) -> List[Dict[str, Any]]:
+        """Obtiene profesores que enseñan una asignatura específica"""
+        professors = self.load_professors()
+        subject_lower = subject.lower()
+        results = []
+        
+        for prof in professors:
+            asignaturas = prof.get('asignaturas', '').lower()
+            if subject_lower in asignaturas:
+                results.append(prof)
+        
+        return results
+    
+    def get_professor_statistics(self) -> Dict[str, Any]:
+        """Genera estadísticas sobre el cuerpo docente"""
+        professors = self.load_professors()
+        
+        stats = {
+            "total_professors": len(professors),
+            "by_position": {},
+            "by_dedication": {},
+            "by_minciencias_category": {},
+            "by_faculty": {},
+            "research_stats": {
+                "total_articles_international": 0,
+                "total_articles_national": 0,
+                "total_books_chapters": 0,
+                "total_patents_software": 0,
+                "professors_with_research": 0
+            }
+        }
+        
+        for prof in professors:
+            # Count by position
+            posicion = prof.get('posicion', prof.get('escalafon_puesto', 'N/A'))
+            if posicion not in stats["by_position"]:
+                stats["by_position"][posicion] = 0
+            stats["by_position"][posicion] += 1
+            
+            # Count by dedication
+            dedicacion = prof.get('tipo_dedicacion', 'N/A')
+            if dedicacion and dedicacion != 'N/A':
+                if dedicacion not in stats["by_dedication"]:
+                    stats["by_dedication"][dedicacion] = 0
+                stats["by_dedication"][dedicacion] += 1
+            
+            # Count by MinCiencias
+            minc = prof.get('categoria_minciencias', '')
+            if minc:
+                if minc not in stats["by_minciencias_category"]:
+                    stats["by_minciencias_category"][minc] = 0
+                stats["by_minciencias_category"][minc] += 1
+            
+            # Count by faculty
+            fac = prof.get('facultad', 'N/A')
+            if fac:
+                if fac not in stats["by_faculty"]:
+                    stats["by_faculty"][fac] = 0
+                stats["by_faculty"][fac] += 1
+            
+            # Research statistics
+            stats["research_stats"]["total_articles_international"] += prof.get('articulos_internacionales_indexados', 0)
+            stats["research_stats"]["total_articles_national"] += prof.get('articulos_nacionales_indexados', 0)
+            stats["research_stats"]["total_books_chapters"] += prof.get('libros_capitulos_investigacion', 0)
+            stats["research_stats"]["total_patents_software"] += prof.get('patentes_disenos_software', 0)
+            
+            if prof.get('total_productos', 0) > 0:
+                stats["research_stats"]["professors_with_research"] += 1
+        
+        return stats
     
     def format_publications(self, publications: List[Dict[str, Any]]) -> str:
         """Formatea lista de publicaciones para inyectar en contexto"""
