@@ -29,7 +29,8 @@
       "libros_capitulos_investigacion": 0,
       "patentes_disenos_software": 0,
       "productos_creacion": 0,
-      "total_productos": 10
+      "total_productos": 10,
+      "otra_informacion": ""
     },
     {
       "nombre": "FUENTES RAMÍREZ ALEJANDRA",
@@ -54,7 +55,8 @@
       "libros_capitulos_investigacion": 0,
       "patentes_disenos_software": 0,
       "productos_creacion": 0,
-      "total_productos": 10
+      "total_productos": 10,
+      "otra_informacion": ""
     },
     {
       "nombre": "GUEVARA LOZANO MARYORY",
@@ -79,7 +81,8 @@
       "libros_capitulos_investigacion": 0,
       "patentes_disenos_software": 0,
       "productos_creacion": 0,
-      "total_productos": 0
+      "total_productos": 0,
+      "otra_informacion": ""
     },
     {
       "nombre": "MORENO FERGUSSON MARÍA ELISA",
@@ -104,7 +107,8 @@
       "libros_capitulos_investigacion": 1,
       "patentes_disenos_software": 1,
       "productos_creacion": 0,
-      "total_productos": 9
+      "total_productos": 9,
+      "otra_informacion": ""
     },
     {
       "nombre": "OSPINA ROMERO ANGÉLICA MARÍA",
@@ -129,7 +133,8 @@
       "libros_capitulos_investigacion": 1,
       "patentes_disenos_software": 1,
       "productos_creacion": 0,
-      "total_productos": 13
+      "total_productos": 13,
+      "otra_informacion": ""
     },
     {
       "nombre": "MENDIENTA MONTEALEGRE JIMMY LEONARDO",
@@ -154,7 +159,8 @@
       "libros_capitulos_investigacion": 0,
       "patentes_disenos_software": 0,
       "productos_creacion": 0,
-      "total_productos": 0
+      "total_productos": 0,
+      "otra_informacion": ""
     },
     {
       "nombre": "ROBAYO TÉLLEZ ASTRID VIVIANA",
@@ -179,7 +185,8 @@
       "libros_capitulos_investigacion": 0,
       "patentes_disenos_software": 0,
       "productos_creacion": 0,
-      "total_productos": 0
+      "total_productos": 0,
+      "otra_informacion": ""
     },
     {
       "nombre": "SÁCHICA BERNAL ALBA IRENE",
@@ -204,7 +211,8 @@
       "libros_capitulos_investigacion": 0,
       "patentes_disenos_software": 0,
       "productos_creacion": 0,
-      "total_productos": 0
+      "total_productos": 0,
+      "otra_informacion": ""
     },
     {
       "nombre": "DURÁN DE VILLALOBOS MARÍA MERCEDES",
@@ -229,7 +237,8 @@
       "libros_capitulos_investigacion": 0,
       "patentes_disenos_software": 0,
       "productos_creacion": 0,
-      "total_productos": 0
+      "total_productos": 0,
+      "otra_informacion": ""
     },
     {
       "nombre": "ALFONSO MORA MARGARETH LORENA",
@@ -254,7 +263,8 @@
       "libros_capitulos_investigacion": 0,
       "patentes_disenos_software": 0,
       "productos_creacion": 0,
-      "total_productos": 0
+      "total_productos": 0,
+      "otra_informacion": ""
     },
     {
       "nombre": "VILLAMIL PARRA WILDER ANDRES",
@@ -279,7 +289,8 @@
       "libros_capitulos_investigacion": 0,
       "patentes_disenos_software": 0,
       "productos_creacion": 0,
-      "total_productos": 0
+      "total_productos": 0,
+      "otra_informacion": ""
     }
   ]
 }

@@ -134,10 +134,11 @@ class ContextManager:
                             lines.append(f"  MinCiencias: {categoria_minciencias}")
                         
                         # Información de productividad académica si existe
+                        # horas_investigacion = horas dedicadas a investigación durante el semestre
                         horas_investigacion = prof.get('horas_investigacion', 0)
                         total_productos = prof.get('total_productos', 0)
                         if horas_investigacion > 0 or total_productos > 0:
-                            lines.append(f"  📊 Investigación: {horas_investigacion}h | {total_productos} productos")
+                            lines.append(f"  📊 Investigación: {horas_investigacion}h (semestre) | {total_productos} productos")
                             
                             # Detallar publicaciones si existen
                             art_intl = prof.get('articulos_internacionales_indexados', 0)
@@ -154,8 +155,13 @@ class ContextManager:
                                     details.append(f"{libros} libros/capítulos")
                                 if patentes > 0:
                                     details.append(f"{patentes} patentes/software")
-                                if details:
+                        if details:
                                     lines.append(f"    └ {' | '.join(details)}")
+                        
+                        # Incluir otra_informacion si existe
+                        otra_info = prof.get('otra_informacion', '').strip()
+                        if otra_info:
+                            lines.append(f"  📤 {otra_info}")
                         
                         lines.append("")
         elif isinstance(faculty_data, list):

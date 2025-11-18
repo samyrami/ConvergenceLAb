@@ -333,6 +333,72 @@ Universidad de Tercera Generación que integra docencia, investigación e impact
         
         return results
     
+    def get_professor_by_name(self, name: str) -> Optional[Dict[str, Any]]:
+        """Obtiene datos completos de un profesor por nombre exacto o parcial"""
+        professors = self.load_professors()
+        name_lower = name.lower()
+        
+        # Búsqueda exacta primero
+        for prof in professors:
+            if prof.get('nombre', '').lower() == name_lower:
+                return prof
+        
+        # Búsqueda parcial
+        for prof in professors:
+            if name_lower in prof.get('nombre', '').lower():
+                return prof
+        
+        return None
+    
+    def update_profesor_informacion(self, profesor_nombre: str, otra_informacion: str, append: bool = False) -> bool:
+        """Actualiza o agrega información al campo otra_informacion de un profesor
+        
+        Args:
+            profesor_nombre: Nombre del profesor
+            otra_informacion: Información adicional a agregar
+            append: Si True, agrega la información al final; si False, reemplaza
+            
+        Returns:
+            True si se actualizó correctamente, False si no se encontró
+        """
+        professors = self.load_professors()
+        profesor_lower = profesor_nombre.lower()
+        
+        for prof in professors:
+            if prof.get('nombre', '').lower() == profesor_lower:
+                if append and prof.get('otra_informacion', '').strip():
+                    # Agregar a lo existente
+                    prof['otra_informacion'] += f" | {otra_informacion}"
+                else:
+                    # Reemplazar
+                    prof['otra_informacion'] = otra_informacion
+                
+                # Guardar los cambios en el archivo
+                self._save_professors(professors)
+                return True
+        
+        return False
+    
+    def _save_professors(self, professors: List[Dict[str, Any]]) -> None:
+        """Guarda la lista de profesores de vuelta al archivo JSON"""
+        try:
+            file_path = self.kb_path / "faculty_professors.json"
+            # Leer el archivo completo para preservar metadatos
+            with open(file_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            
+            # Actualizar lista de profesores
+            data['professors'] = professors
+            
+            # Guardar
+            with open(file_path, 'w', encoding='utf-8') as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+            
+            # Resetear cache
+            self._professors_data = None
+        except Exception as e:
+            logger.error(f"Error guardando datos de profesores: {e}")
+    
     def get_professor_statistics(self) -> Dict[str, Any]:
         """Genera estadísticas sobre el cuerpo docente"""
         professors = self.load_professors()
