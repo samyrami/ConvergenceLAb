@@ -267,15 +267,15 @@
       "otra_informacion": ""
     },
     {
-      "nombre": "VILLAMIL PARRA WILDER ANDRES",
-      "titulo": "Doctorado",
+      "nombre": "Wilder Andrés Villamil Parra",
+      "titulo": "Doctorado en Biociencias - Biología - Universidad Nacional de Colombia",
       "pais": "COLOMBIA",
-      "pregrado": "Fisioterapeuta",
-      "escalafon_puesto": "Asistente",
+      "pregrado": "Fisioterapeuta - Universidad Manuela Beltrán",
+      "escalafon_puesto": "Investigador asistente",
       "categoria_minciencias": "",
-      "nivel_formacion": null,
-      "titulo_postgrado": null,
-      "grupo_investigacion_principal": null,
+      "nivel_formacion": "Doctorado",
+      "titulo_postgrado": "Maestría en Fisioterapia en Deporte y actividad física - Universidad Nacional de Colombia",
+      "grupo_investigacion_principal": "Grupo de Investigación Movimiento Corporal Humano",
       "facultad": "Facultad de Enfermería y Rehabilitación",
       "tipo_contrato": null,
       "tipo_dedicacion": null,
@@ -290,7 +290,7 @@
       "patentes_disenos_software": 0,
       "productos_creacion": 0,
       "total_productos": 0,
-      "otra_informacion": ""
+      "otra_informacion": "Profesor de pregrado y posgrado de la Facultad de Enfermería y Rehabilitación de la Universidad de La Sabana. Investigador asociado reconocido por el Ministerio de Ciencia, Tecnología e Innovación de Colombia. Miembro activo del Grupo de Investigación Movimiento Corporal Humano, desde el cual lidera proyectos de investigación en fisioterapia aplicada al paciente crítico y a la fisiología del ejercicio. Su labor docente e investigativa se centra en el estudio de las respuestas agudas y crónicas al ejercicio, la hipoxia y los procesos de recuperación en unidades de cuidado intensivo, con énfasis en la integración entre la práctica clínica y la evidencia científica. Ha desarrollado proyectos sobre biomarcadores musculares, programas de ejercicio terapéutico y respuestas epigenéticas al ejercicio en enfermedades respiratorias y metabólicas, consolidando un eje de trabajo que vincula la fisiología, la rehabilitación y el movimiento humano. Ha sido beneficiario de múltiples becas y subvenciones de investigación nacionales e internacionales, y cuenta con producción científica indexada en revistas de alto impacto. Su trayectoria combina la experiencia clínica en cuidados intensivos con la investigación aplicada y la gestión de programas de pregrado y posgrado."
     }
   ]
 }
